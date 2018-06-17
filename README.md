@@ -27,7 +27,7 @@ git clone https://github.com/kazijawad/FilmTime.git
 
 2. Enter the directory and install the necessary packages
 ```
-cd CatcherMap/
+cd FilmTime/
 npm install
 ```
 
