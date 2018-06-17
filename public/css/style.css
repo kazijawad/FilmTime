@@ -66,6 +66,14 @@ body {
   z-index: -1;
   transition: all .4s; }
 
+.flash {
+  margin: 2rem 20rem;
+  padding: 1.5rem;
+  font-size: 3rem;
+  border-radius: 1rem;
+  background-color: #212121;
+  color: #E040FB; }
+
 .navigation {
   display: inline-block;
   float: right;
@@ -82,7 +90,7 @@ body {
   padding: 2rem 3rem;
   background-color: #212121; }
 
-.section-add {
+.section-new {
   margin: 3rem 20rem;
   border-radius: 1rem;
   background-color: #212121; }
