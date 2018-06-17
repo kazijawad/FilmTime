@@ -1,0 +1,14 @@
+.navigation {
+    display: inline-block;
+    float: right;
+    vertical-align: middle;
+    font-size: 2rem;
+    line-height: 5.7rem;
+
+    &__item {
+        display: inline-block;
+        padding-right: 2rem;
+        list-style-type: none;
+        color: $color-accent;
+    }
+}
