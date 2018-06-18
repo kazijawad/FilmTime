@@ -11,9 +11,11 @@ const LocalStrategy = require('passport-local');
 const User = require('./models/user');
 const app = express();
 
+// ROUTE CONFIG
 const indexRoutes = require('./routes/index');
 const movieRoutes = require('./routes/movies');
 
+// DB CONFIG
 mongoose.connect(process.env.DATABASE_URI);
 
 // APP CONFIG

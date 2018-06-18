@@ -61,7 +61,7 @@ router.put('/:id', (req, res) => {
 			return res.redirect('back');
 		}
 		req.flash('success', 'Successfully Updated!');
-		res.redirect('movies/' + movie._id);
+		res.redirect(movie._id);
 	});
 });
 
