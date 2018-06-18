@@ -1,48 +1,22 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8"/>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="FilmTime is the site for all movie information.">
-        <title>FilmTime | Movie DB</title>
-        <link href="https://fonts.googleapis.com/css?family=Sunflower:300,500,700" rel="stylesheet">
-        <link rel="shortcut icon" type="image/png" href="images/clapperboard.png">
-        <link rel="stylesheet" href="css/style.css">
-    </head>
-    <body>
-        <header class="header">
-            <h2 class="heading-secondary">
-                FilmTime
-            </h2>
-            <nav class="navigation">
-                <ul>
-                    <% if (!currentUser) { %>
-                        <a href="/register"><li class="navigation__item">Register</li></a>
-                        <a href="/login"><li class="navigation__item">Login</li></a>
-                    <% } else { %>
-                        <li class="navigation__item">Signed In As <%= currentUser.username %></li>
-                        <a href="/logout"><li class="navigation__item">Logout</li></a>
-                    <% } %>
-                </ul>
-            </nav>
-        </header>
+<% include ../partials/header %>
 
-        <% if (error && error.length > 0) { %>
-            <div class="flash">
-                <p><%= error %></p>
-            </div>
-        <% } else if (success && success.length > 0) { %>
-            <div class="flash">
-                <p><%= success %></p>
-            </div>
-        <% } %>
+<section class="section-new">
+    <div class="text-box">
+        <h1 class="heading-primary">Welcome to FilmTime</h1>
+        <a class="btn btn--purple" href="/movies/new">Add a Movie</a>
+    </div>
+</section>
 
-        <section class="section-new">
-            <div class="text-box">
-                <h1 class="heading-primary">Welcome to FilmTime</h1>
-                <a class="btn btn--purple" href="/movies/new">Add a Movie</a>
-            </div>
-        </section>
-    </body>
-</html>
+<section class="section-view">
+    <% movies.forEach(movie => { %>
+        <div class="card">
+            <img class="card__poster" src="<%= movie.poster %>">
+            <h3 class="card__title"><%= movie.title %></h3>
+            <p class="card__link">
+                <a class="btn btn--purple" href="movies/<%= movie._id %>">More Info</a>
+            </p>
+        </div>
+    <% }); %>
+</section>
+
+<% include ../partials/footer %>

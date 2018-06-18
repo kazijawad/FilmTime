@@ -25,6 +25,9 @@ body {
 .text-box {
   padding: 4rem; }
 
+.u-text-decoration {
+  text-decoration: none; }
+
 .btn, .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
@@ -66,6 +69,16 @@ body {
   z-index: -1;
   transition: all .4s; }
 
+.card {
+  display: inline-block;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  background-color: #757575; }
+  .card__title {
+    font-size: 2rem;
+    text-align: center;
+    padding-top: 2rem; }
+
 .flash {
   margin: 2rem 20rem;
   padding: 1.5rem;
@@ -94,3 +107,6 @@ body {
   margin: 3rem 20rem;
   border-radius: 1rem;
   background-color: #212121; }
+
+.section-view {
+  margin: 0 20rem; }

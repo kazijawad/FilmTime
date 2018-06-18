@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="FilmTime is the site for all movie information.">
+        <title>FilmTime | Movie DB</title>
+        <link href="https://fonts.googleapis.com/css?family=Sunflower:300,500,700" rel="stylesheet">
+        <link rel="shortcut icon" type="image/png" href="images/clapperboard.png">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <header class="header">
+            <a class="u-text-decoration" href="/movies">
+                <h2 class="heading-secondary">
+                    FilmTime
+                </h2>
+            </a>
+            <nav class="navigation">
+                <ul>
+                    <% if (!currentUser) { %>
+                        <a href="/register"><li class="navigation__item">Register</li></a>
+                        <a href="/login"><li class="navigation__item">Login</li></a>
+                    <% } else { %>
+                        <li class="navigation__item">Signed In As <%= currentUser.username %></li>
+                        <a href="/logout"><li class="navigation__item">Logout</li></a>
+                    <% } %>
+                </ul>
+            </nav>
+        </header>
+
+        <% if (error && error.length > 0) { %>
+            <div class="flash">
+                <p><%= error %></p>
+            </div>
+        <% } else if (success && success.length > 0) { %>
+            <div class="flash">
+                <p><%= success %></p>
+            </div>
+        <% } %>

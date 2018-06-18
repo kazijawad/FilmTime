@@ -1,44 +1,33 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="FilmTime is the site for all movie information.">
-    <title>FilmTime | Movie DB</title>
-    <link href="https://fonts.googleapis.com/css?family=Sunflower:300,500,700" rel="stylesheet">
-    <link rel="shortcut icon" type="image/png" href="images/clapperboard.png">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+<% include partials/header %>
+
+<div>
+    <h1>Sign Up</h1>
     <div>
-        <h1>Sign Up</h1>
-        <div>
-            <form action="/register" method="post">
-                <div>
-                    <input type="text" name="username" placeholder="Username">
-                </div>
-                <div>
-                    <input type="password" name="password" placeholder="Password">
-                </div>
-                <div>
-                    <input type="text" name="firstName" placeholder="First Name">
-                </div>
-                <div>
-                    <input type="text" name="lastName" placeholder="Last Name">
-                </div>
-                <div>
-                    <input type="email" name="email" placeholder="Email">
-                </div>
-                <div>
-                    <input type="text" name="adminCode" placeholder="Admin Code">
-                </div>
-                <div>
-                    <button>Sign Up!</button>
-                </div>
-            </form>
-            <a href="/movies">Go Back</a>
-        </div>
+        <form action="/register" method="post">
+            <div>
+                <input type="text" name="username" placeholder="Username">
+            </div>
+            <div>
+                <input type="password" name="password" placeholder="Password">
+            </div>
+            <div>
+                <input type="text" name="firstName" placeholder="First Name">
+            </div>
+            <div>
+                <input type="text" name="lastName" placeholder="Last Name">
+            </div>
+            <div>
+                <input type="email" name="email" placeholder="Email">
+            </div>
+            <div>
+                <input type="text" name="adminCode" placeholder="Admin Code">
+            </div>
+            <div>
+                <button>Sign Up!</button>
+            </div>
+        </form>
+        <a href="/movies">Go Back</a>
     </div>
-</body>
-</html>
+</div>
+
+<% include partials/footer %>

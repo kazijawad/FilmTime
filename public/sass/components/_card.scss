@@ -1,0 +1,12 @@
+.card {
+    display: inline-block;
+    padding: 2rem;
+    border-radius: 1.5rem;
+    background-color: $color-secondary-text;
+
+    &__title {
+        font-size: 2rem;
+        text-align: center;
+        padding-top: 2rem;
+    }
+}
