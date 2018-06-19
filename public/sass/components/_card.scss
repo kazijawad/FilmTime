@@ -1,11 +1,21 @@
 .card {
     display: inline-block;
     padding: 2rem;
-    border-radius: .7rem;
-    background-color: $color-secondary;
+    width: 25%;
+    background-image: linear-gradient(to top, #323842, #161e2b);
+    box-shadow: 0 4rem 10rem 0 rgba(0, 0, 0, 0.4);
 
     &__title {
+        font-size: 3rem;
+    }
+
+    &__description {
+        padding-top: 1rem;
         font-size: 2rem;
-        text-align: center;
+        display: -webkit-box;
+        -webkit-line-clamp: 6;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+        overflow: hidden;
     }
 }

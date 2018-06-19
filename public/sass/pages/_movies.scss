@@ -1,16 +1,16 @@
 .section-new {
-    margin: 3rem 20rem;
-    border-radius: 1rem;
-    background-color: $color-secondary;
+    margin: 3rem 30rem;
+    background-image: linear-gradient(to right, #323842, #161e2b);
+    box-shadow: 0 4rem 8rem 2rem rgba(0, 0, 0, 0.4);
 }
 
 .section-view {
-    margin: 0 20rem;
+    margin: 0 30rem;
 }
 
 .section-show {
-    margin: 5rem 20rem;
-    border-radius: 2rem;
-    background-color: $color-secondary;
-    color: $color-accent;
+    margin: 5rem 30rem;
+    padding-bottom: 10rem;
+    background-image: linear-gradient(to left, #323842, #161e2b);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
 }

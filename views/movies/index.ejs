@@ -3,7 +3,7 @@
 <section class="section-new">
     <div class="text-box">
         <h1 class="heading-primary">View our collection of movies</h1>
-        <a class="btn btn--purple" href="/movies/new">Add a Movie</a>
+        <a class="btn btn--white" href="/movies/new">Add a Movie</a>
     </div>
 </section>
 
@@ -11,8 +11,9 @@
     <% movies.forEach(movie => { %>
         <div class="card">
             <h3 class="card__title"><%= movie.title %></h3>
+            <p class="card__description"><%= movie.description %></p>
             <p class="card__link">
-                <a class="btn btn--purple" href="movies/<%= movie._id %>">More Info</a>
+                <a class="btn btn--white" href="movies/<%= movie._id %>">More Info</a>
             </p>
         </div>
     <% }); %>

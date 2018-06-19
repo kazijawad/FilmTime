@@ -13,7 +13,7 @@
     
     &:hover {
         transform: translateY(-3px);
-        box-shadow: 0 1rem 2rem rgba($color-primary,.2);
+        box-shadow: 0 1rem 2rem rgba(#fff,.2);
 
         &::after {
             transform: scaleX(1.4) scaleY(1.6);
@@ -24,15 +24,15 @@
     &:active, &:focus {
         outline: none;
         transform: translateY(-1px);
-        box-shadow: 0 .5rem 1rem rgba($color-primary,.2);
+        box-shadow: 0 .5rem 1rem rgba(#fff,.2);
     }
     
-    &--purple {
-        background-color: $color-primary;
-        color: $color-accent;
+    &--white {
+        background-color: #fff;
+        color: #000;
 
         &::after {
-            background-color: $color-primary;
+            background-color: #fff;
         }
     }
     
