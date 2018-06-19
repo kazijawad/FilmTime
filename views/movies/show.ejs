@@ -8,6 +8,14 @@
         <div class="composition__body">
             <p><%= movie.description %></p>
         </div>
+        <% if (currentUser && movie.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin) { %>
+            <div class="composition__link">
+                <a class="btn btn--white" href="/movies/<%= movie._id %>/edit">Edit</a>
+            </div>
+            <form class="composition__link" action="/movies/<%= movie._id %>?_method=DELETE" method="POST">
+                <button class="btn btn--white">Delete</button>
+            </form>
+        <% } %>
     </div>
 </div>
 

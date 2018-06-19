@@ -105,6 +105,10 @@ body {
     font-size: 2rem;
     padding-left: 1rem;
     padding-right: 4rem; }
+  .composition__link {
+    display: inline-block; }
+    .composition__link:not(:last-child) {
+      padding-right: 1rem; }
 
 .flash {
   margin: 2rem 30rem;

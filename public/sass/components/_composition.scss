@@ -12,4 +12,12 @@
         padding-left: 1rem; 
         padding-right: 4rem;
     }
+
+    &__link {
+        display: inline-block;
+
+        &:not(:last-child) {
+            padding-right: 1rem;
+        }
+    }
 }
