@@ -1,12 +1,12 @@
 .card {
-    display: inline-block;
+    margin: 1rem 0;
     padding: 2rem;
-    width: 25%;
+    width: 30rem;
     background-image: linear-gradient(to top, #323842, #161e2b);
     box-shadow: 0 4rem 10rem 0 rgba(0, 0, 0, 0.4);
 
     &__title {
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
 
     &__description {
@@ -17,5 +17,6 @@
         -webkit-box-orient: vertical;
         text-overflow: ellipsis;
         overflow: hidden;
+        color: #a2aec1;
     }
 }

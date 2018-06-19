@@ -72,13 +72,13 @@ body {
   transition: all .4s; }
 
 .card {
-  display: inline-block;
+  margin: 1rem 0;
   padding: 2rem;
-  width: 25%;
+  width: 30rem;
   background-image: linear-gradient(to top, #323842, #161e2b);
   box-shadow: 0 4rem 10rem 0 rgba(0, 0, 0, 0.4); }
   .card__title {
-    font-size: 3rem; }
+    font-size: 2.5rem; }
   .card__description {
     padding-top: 1rem;
     font-size: 2rem;
@@ -86,7 +86,8 @@ body {
     -webkit-line-clamp: 6;
     -webkit-box-orient: vertical;
     text-overflow: ellipsis;
-    overflow: hidden; }
+    overflow: hidden;
+    color: #a2aec1; }
 
 .composition {
   padding: 3rem;
@@ -127,6 +128,9 @@ body {
   box-shadow: 0 4rem 8rem 2rem rgba(0, 0, 0, 0.4); }
 
 .section-view {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
   margin: 0 30rem; }
 
 .section-show {
