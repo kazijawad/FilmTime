@@ -1,4 +1,21 @@
 .header {
-    padding: 2rem 3rem;
-    background-color: $color-primary-text;
+    display: flex;
+    margin: 0;
+    padding: 1.5rem 6rem;
+    background-color: $color-secondary;
+    justify-content: space-between;
+
+    &__nav {
+        align-self: center;
+        font-size: 2rem;
+    }
+
+    &__nav-item {
+        text-decoration: none;
+        color: $color-primary;
+
+        &:not(:last-child) {
+            margin: 2rem;
+        }
+    }
 }

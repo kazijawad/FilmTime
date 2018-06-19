@@ -3,17 +3,17 @@
         text-transform: uppercase;
         text-decoration: none;
         margin-top: 2rem;
-        padding: 2rem 4rem;
+        padding: 1rem 2rem;
         display: inline-block;
         border-radius: 10rem;
         transition: all .2s;
         position: relative;
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
     
     &:hover {
         transform: translateY(-3px);
-        box-shadow: 0 1rem 2rem rgba($color-secondary-text,.2);
+        box-shadow: 0 1rem 2rem rgba($color-primary,.2);
 
         &::after {
             transform: scaleX(1.4) scaleY(1.6);
@@ -24,12 +24,12 @@
     &:active, &:focus {
         outline: none;
         transform: translateY(-1px);
-        box-shadow: 0 .5rem 1rem rgba($color-secondary-text,.2);
+        box-shadow: 0 .5rem 1rem rgba($color-primary,.2);
     }
     
     &--purple {
         background-color: $color-primary;
-        color: $color-icon;
+        color: $color-accent;
 
         &::after {
             background-color: $color-primary;

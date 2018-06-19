@@ -8,26 +8,27 @@
         <title>FilmTime | Movie DB</title>
         <link href="https://fonts.googleapis.com/css?family=Sunflower:300,500,700" rel="stylesheet">
         <link rel="shortcut icon" type="image/png" href="../../images/clapperboard.png">
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
         <link rel="stylesheet" href="../../css/style.css">
     </head>
     <body>
         <header class="header">
-            <a class="u-text-decoration" href="/movies">
-                <h2 class="heading-secondary">
-                    FilmTime
-                </h2>
-            </a>
-            <nav class="navigation">
-                <ul>
-                    <% if (!currentUser) { %>
-                        <a href="/register"><li class="navigation__item">Register</li></a>
-                        <a href="/login"><li class="navigation__item">Login</li></a>
-                    <% } else { %>
-                        <li class="navigation__item">Signed In As <%= currentUser.username %></li>
-                        <a href="/logout"><li class="navigation__item">Logout</li></a>
-                    <% } %>
-                </ul>
-            </nav>
+            <div>
+                <a class="u-text-decoration u-inline-block" href="/movies">
+                    <h2 class="heading-secondary">
+                        FilmTime
+                    </h2>
+                </a>
+            </div>
+            <div class="header__nav">
+                <% if (!currentUser) { %>
+                    <a class="header__nav-item" href="/register">Register</a>
+                    <a class="header__nav-item" href="/login">Login</a>
+                <% } else { %>
+                    <a class="header__nav-item" href="#">Signed In As <%= currentUser.username %></a>
+                    <a class="header__nav-item" href="/logout">Logout</a>
+                <% } %>
+            </div>
         </header>
 
         <% if (error && error.length > 0) { %>

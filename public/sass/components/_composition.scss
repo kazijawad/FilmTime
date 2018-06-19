@@ -1,0 +1,15 @@
+.composition {
+    padding: 3rem;
+    color: $color-primary;
+
+    &__title {
+        font-size: 3rem;
+        padding: 1rem;
+    }
+
+    &__body {
+        font-size: 2rem;
+        padding-left: 1rem; 
+        padding-right: 4rem;
+    }
+}

@@ -2,7 +2,7 @@
 
 <section class="section-new">
     <div class="text-box">
-        <h1 class="heading-primary">Welcome to FilmTime</h1>
+        <h1 class="heading-primary">View our collection of movies</h1>
         <a class="btn btn--purple" href="/movies/new">Add a Movie</a>
     </div>
 </section>
@@ -10,7 +10,6 @@
 <section class="section-view">
     <% movies.forEach(movie => { %>
         <div class="card">
-            <img class="card__poster" src="<%= movie.poster %>">
             <h3 class="card__title"><%= movie.title %></h3>
             <p class="card__link">
                 <a class="btn btn--purple" href="movies/<%= movie._id %>">More Info</a>
