@@ -1,22 +1,22 @@
 <% include ../partials/header %>
 
-<div>
-    <h1>Create a New Movie Page</h1>
-    <div>
+<div class="form">
+    <h1 class="form__title">Create a New Movie Page</h1>
+    <div class="form__body">
         <form action="/movies" method="POST">
-            <div>
-                <label for="title">Title</label>
-                <input type="text" name="title" id="title" placeholder="Title">
+            <div class="form__item">
+                <label class="form__label" for="title">Title</label>
+                <input class="form__input" type="text" name="title" id="title" placeholder="Title">
             </div>
-            <div>
-                <label for="description">Description</label>
-                <input type="text" name="description" id="description" placeholder="Description">
+            <div class="form__item">
+                <label class="form__label" for="description">Description</label>
+                <input class="form__input" type="text" name="description" id="description" placeholder="Description">
             </div>
-            <div>
-                <button class="btn btn--purple">Submit!</button>
+            <div class="form__item">
+                <button class="btn btn--black">Submit!</button>
             </div>
         </form>
-        <a href="/movies">Go Back</a>
+        <a class="btn btn--black" href="/movies">Go Back</a>
     </div>
 </div>
 

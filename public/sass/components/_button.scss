@@ -35,6 +35,15 @@
             background-color: #fff;
         }
     }
+
+    &--black {
+        background-color: #000;
+        color: #fff;
+
+        &::after {
+            background-color: #000;
+        }
+    }
     
     &::after {
         content: "";
