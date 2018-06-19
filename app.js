@@ -14,6 +14,7 @@ const app = express();
 // ROUTE CONFIG
 const indexRoutes = require('./routes/index');
 const movieRoutes = require('./routes/movies');
+const commentRoutes = require('./routes/comments');
 
 // DB CONFIG
 mongoose.connect(process.env.DATABASE_URI);
@@ -53,6 +54,7 @@ app.use((req, res, next) => {
 // ROUTE CONFIG
 app.use('/', indexRoutes);
 app.use('/movies', movieRoutes);
+app.use('/movies/:id/comments', commentRoutes);
 
 app.use((req, res) => {
 	res.status(404).render('error');

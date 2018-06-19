@@ -17,3 +17,14 @@
     background-image: linear-gradient(to left, #323842, #161e2b);
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
 }
+
+.section-comment {
+    margin: -5rem 30rem;
+    padding-bottom: 10rem;
+    background-image: linear-gradient(to right, #323842, #161e2b);
+    transform: skewY(3deg);
+
+    & > * {
+        transform: skewY(-3deg);
+    }
+}

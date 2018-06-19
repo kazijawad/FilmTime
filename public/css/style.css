@@ -24,6 +24,9 @@ body {
 .text-box {
   padding: 4rem; }
 
+.comment-box {
+  padding: 0 4rem; }
+
 .u-text-decoration {
   text-decoration: none; }
 
@@ -65,6 +68,9 @@ body {
   .btn--black::after {
     background-color: #000; }
 
+.btn--comment {
+  margin: 5rem 3rem !important; }
+
 .btn::after {
   content: "";
   display: inline-block;
@@ -94,6 +100,23 @@ body {
     text-overflow: ellipsis;
     overflow: hidden;
     color: #a2aec1; }
+
+.comment__user {
+  font-size: 2.5rem;
+  color: #a2aec1; }
+
+.comment__time {
+  font-size: 1.5rem;
+  font-style: italic;
+  color: #a2aec1; }
+
+.comment__text {
+  font-size: 2.8rem; }
+
+.comment__btn {
+  font-size: 1rem !important; }
+  .comment__btn:not(:last-child) {
+    margin-right: 2rem; }
 
 .composition {
   padding: 3rem;
@@ -170,3 +193,11 @@ body {
   padding-bottom: 10rem;
   background-image: linear-gradient(to left, #323842, #161e2b);
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%); }
+
+.section-comment {
+  margin: -5rem 30rem;
+  padding-bottom: 10rem;
+  background-image: linear-gradient(to right, #323842, #161e2b);
+  transform: skewY(3deg); }
+  .section-comment > * {
+    transform: skewY(-3deg); }

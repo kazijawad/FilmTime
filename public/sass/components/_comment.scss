@@ -1,0 +1,24 @@
+.comment {
+    &__user {
+        font-size: 2.5rem;
+        color: #a2aec1;
+    }
+
+    &__time {
+        font-size: 1.5rem;
+        font-style: italic;
+        color: #a2aec1;
+    }
+
+    &__text {
+        font-size: 2.8rem;
+    }
+
+    &__btn {
+        font-size: 1rem !important;
+
+        &:not(:last-child) {
+            margin-right: 2rem;
+        }
+    }
+}

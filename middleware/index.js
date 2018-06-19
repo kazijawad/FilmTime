@@ -30,7 +30,7 @@ module.exports = {
 		});
 	},
 	checkUserComment: (req, res, next) => {
-		Comment.findById(req.params.id, (error, foundComment) => {
+		Comment.findById(req.params.commentId, (error, foundComment) => {
 			if (error || !foundComment) {
 				console.error(error);
 				req.flash('error', 'Sorry, that comment does not exist!');
