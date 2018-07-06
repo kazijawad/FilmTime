@@ -36,7 +36,7 @@ module.exports = {
 				req.flash('error', 'Sorry, that comment does not exist!');
 				res.redirect('/movies');
 			} else if (foundComment.author.id.equals(req.user._id) || req.user.isAdmin) {
-				req.movie = foundComment;
+				req.comment = foundComment;
 				next();
 			} else {
 				req.flash('error', 'You do not have permission to do that!');
