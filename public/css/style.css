@@ -111,7 +111,7 @@ body {
     font-style: italic;
     color: #a2aec1; }
   .comment__text {
-    font-size: 2.8rem; }
+    font-size: 2.3rem; }
   .comment__btn {
     font-size: 1rem !important; }
     .comment__btn:not(:last-child) {
@@ -188,15 +188,10 @@ body {
   margin: 0 30rem; }
 
 .section-show {
-  margin: 5rem 30rem;
-  padding-bottom: 10rem;
-  background-image: linear-gradient(to left, #323842, #161e2b);
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%); }
+  margin: 3rem 30rem;
+  background-image: linear-gradient(to top left, #323842, #161e2b); }
 
 .section-comment {
-  margin: -5rem 30rem;
-  padding-bottom: 10rem;
-  background-image: linear-gradient(to right, #323842, #161e2b);
-  transform: skewY(3deg); }
-  .section-comment > * {
-    transform: skewY(-3deg); }
+  margin: 0 30rem;
+  padding-bottom: 2rem;
+  background-image: linear-gradient(to bottom right, #323842, #161e2b); }

@@ -3,7 +3,6 @@ const mongoose = require('mongoose');
 const movieSchema = new mongoose.Schema({
 	title: String,
 	description: String,
-	cast: [String],
 	createdAt: {
 		type: Date,
 		default: Date.now,

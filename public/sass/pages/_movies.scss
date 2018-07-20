@@ -12,19 +12,12 @@
 }
 
 .section-show {
-    margin: 5rem 30rem;
-    padding-bottom: 10rem;
-    background-image: linear-gradient(to left, #323842, #161e2b);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+    margin: 3rem 30rem;
+    background-image: linear-gradient(to top left, #323842, #161e2b);
 }
 
 .section-comment {
-    margin: -5rem 30rem;
-    padding-bottom: 10rem;
-    background-image: linear-gradient(to right, #323842, #161e2b);
-    transform: skewY(3deg);
-
-    & > * {
-        transform: skewY(-3deg);
-    }
+    margin: 0 30rem;
+    padding-bottom: 2rem;
+    background-image: linear-gradient(to bottom right, #323842, #161e2b);
 }
