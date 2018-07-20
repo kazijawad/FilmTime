@@ -1,8 +1,22 @@
 {
   "name": "filmtime",
   "version": "1.0.0",
-  "description": "A web app that provides a database of movies.",
+  "description": "A movie sharing web app.",
+  "homepage": "https://www.filmtime.herokuapp.com",
+  "bugs": {
+    "url": "https://github.com/kazijawad/FilmTime/issues"
+  },
+  "author": "Kazi Jawad",
+  "license": "MIT",
   "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kazijawad/FilmTime"
+  },
+  "engines": {
+    "node": "8.x",
+    "npm": "5.x"
+  },
   "scripts": {
     "start": "node app.js",
     "test": "nodemon app.js",
@@ -10,8 +24,6 @@
     "compile:sass": "node-sass public/sass/main.scss public/css/style.css",
     "watch:sass": "node-sass public/sass/main.scss public/css/style.css -w"
   },
-  "author": "Kazi Jawad",
-  "license": "MIT",
   "dependencies": {
     "body-parser": "^1.18.3",
     "connect-flash": "^0.1.1",
