@@ -2,7 +2,7 @@
   "name": "filmtime",
   "version": "1.0.0",
   "description": "A movie sharing web app.",
-  "homepage": "https://www.filmtime.herokuapp.com",
+  "homepage": "https://filmtime.herokuapp.com",
   "bugs": {
     "url": "https://github.com/kazijawad/FilmTime/issues"
   },
