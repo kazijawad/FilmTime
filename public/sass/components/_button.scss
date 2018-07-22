@@ -27,6 +27,19 @@
         box-shadow: 0 .5rem 1rem rgba(#fff,.2);
     }
     
+    &::after {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: 10rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all .4s;
+    }
+
     &--white {
         background-color: #fff;
         color: #000;
@@ -48,17 +61,8 @@
     &--comment {
         margin: 5rem 3rem !important;
     }
-    
-    &::after {
-        content: "";
-        display: inline-block;
-        height: 100%;
-        width: 100%;
-        border-radius: 10rem;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -1;
-        transition: all .4s;
+
+    &--mini {
+        padding: .5rem 1rem;
     }
 }

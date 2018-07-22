@@ -27,11 +27,19 @@ body {
 .comment-box {
   padding: 0 4rem; }
 
+.error-message {
+  margin-top: 10rem;
+  font-size: 4rem;
+  color: #161e2b; }
+
 .u-text-decoration {
   text-decoration: none; }
 
 .u-inline-block {
   display: inline-block; }
+
+.u-margin-left {
+  margin-left: 1rem; }
 
 .btn, .btn:link, .btn:visited {
   text-transform: uppercase;
@@ -56,6 +64,18 @@ body {
   transform: translateY(-1px);
   box-shadow: 0 0.5rem 1rem rgba(255, 255, 255, 0.2); }
 
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 10rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all .4s; }
+
 .btn--white {
   background-color: #fff;
   color: #000; }
@@ -71,17 +91,8 @@ body {
 .btn--comment {
   margin: 5rem 3rem !important; }
 
-.btn::after {
-  content: "";
-  display: inline-block;
-  height: 100%;
-  width: 100%;
-  border-radius: 10rem;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  transition: all .4s; }
+.btn--mini {
+  padding: .5rem 1rem; }
 
 .card {
   margin: 1rem 0;
@@ -158,6 +169,11 @@ body {
     font-size: 2rem;
     padding-bottom: 1rem; }
   .form__input {
+    padding: 1rem;
+    border: .2rem solid #38475e; }
+  .form__search {
+    font-size: 1.5rem;
+    margin-top: 3rem;
     padding: 1rem;
     border: .2rem solid #38475e; }
 
