@@ -6,10 +6,23 @@ const router = express.Router();
 
 // INDEX
 router.get('/', (req, res) => {
-	Movie.find({}, (error, allMovies) => {
-		if (error) { return console.error(error); }
-		res.render('movies/index', { movies: allMovies, page: 'movies' });
-	});
+	let noMatch = null;
+	if (req.query.search) {
+		const regex = new RegExp(escapeRegex(req.query.search), 'gi');
+		Movie.find({ title: regex }, (error, allMovies) => {
+			if (error) { return console.error(error); }
+			if (allMovies.length < 1) {
+				noMatch = 'No movies match that query, please try again.';
+			}
+
+			res.render('movies/index', { movies: allMovies, noMatch: noMatch, page: 'movies' });
+		});
+	} else {
+		Movie.find({}, (error, allMovies) => {
+			if (error) { return console.error(error); }
+			res.render('movies/index', { movies: allMovies, noMatch: noMatch, page: 'movies' });
+		});
+	}
 });
 
 // CREATE
@@ -86,5 +99,9 @@ router.delete('/:id', isLoggedIn, checkUserMovie, (req, res) => {
 		});
 	});
 });
+
+const escapeRegex = text => {
+	return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&');
+};
 
 module.exports = router;
