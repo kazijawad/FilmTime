@@ -1,0 +1,20 @@
+.error {
+    position:fixed;
+    opacity: 0.8;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    padding-left: 36rem;
+    background-image: linear-gradient(to bottom right, #323842, #161e2b);
+    color: #fff;
+
+    &__heading {
+        font-size: 12rem;
+        margin-top: 25rem;
+    }
+
+    &__text {
+        font-size: 3rem;
+    }
+}
