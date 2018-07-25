@@ -1,19 +1,17 @@
 <% include ../partials/header %>
 
 <section class="section-new">
-    <div class="text-box">
         <h1 class="heading-primary">View our collection of movies</h1>
         <a class="btn btn--white" href="/movies/new">Add a Movie</a>
         <form action="/movies" method="GET">
             <input class="form__search" type="text" name="search" placeholder="Search Movies...">
             <input class="btn btn--white btn--mini u-margin-left" type="submit" value="Search">
         </form>
-    </div>
 </section>
 
 <section class="section-view">
     <% if (noMatch !== null) { %>
-        <p class="error-message"><%= noMatch %></p>
+        <p class="section-view__error"><%= noMatch %></p>
     <% } %>
 
     <% movies.forEach(movie => { %>

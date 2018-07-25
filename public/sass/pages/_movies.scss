@@ -1,5 +1,6 @@
 .section-new {
     margin: 3rem 30rem;
+    padding: 4rem;
     background-image: linear-gradient(to right, #323842, #161e2b);
     box-shadow: 0 4rem 8rem 2rem rgba(0, 0, 0, 0.4);
 }
@@ -9,6 +10,12 @@
     flex-wrap: wrap;
     justify-content: space-around;
     margin: 0 30rem;
+
+    &__error {
+        margin-top: 10rem;
+        font-size: 4rem;
+        color: $color-blue-dark;
+    }
 }
 
 .section-show {

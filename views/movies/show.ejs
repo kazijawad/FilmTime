@@ -21,26 +21,24 @@
 
 <div class="section-comment">
     <a class="btn btn--white btn--comment" href="/movies/<%= movie._id %>/comments/new">Add New Comment</a>
-    <div class="comment-box">
-        <% movie.comments.forEach(comment => { %>
-            <div class="comment">
-                <strong class="comment__user"><%= comment.author.username %></strong>
-                <span class="comment__time"><%= moment(comment.createdAt).fromNow() %></span>
-                <div class="comment__body">
-                    <p class="comment__text"><%= comment.text %></p>
-                    <% if (currentUser && comment.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin) { %>
-                        <div>
-                            <a class="btn btn--white comment__btn" href="/movies/<%= movie._id %>/comments/<%= comment._id %>/edit">Edit Comment</a>
-                            <form class="u-inline-block" action="/movies/<%= movie._id %>/comments/<%= comment._id %>?_method=DELETE" method="POST">
-                                <button class="btn btn--black comment__btn u-inline-block">Delete Comment</button>
-                            </form>
-                        </div>
-                    <% } %>
-                    <hr>
-                </div>
+    <% movie.comments.forEach(comment => { %>
+        <div class="comment">
+            <strong class="comment__user"><%= comment.author.username %></strong>
+            <span class="comment__time"><%= moment(comment.createdAt).fromNow() %></span>
+            <div class="comment__body">
+                <p class="comment__text"><%= comment.text %></p>
+                <% if (currentUser && comment.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin) { %>
+                    <div>
+                        <a class="btn btn--white comment__btn" href="/movies/<%= movie._id %>/comments/<%= comment._id %>/edit">Edit Comment</a>
+                        <form class="u-inline-block" action="/movies/<%= movie._id %>/comments/<%= comment._id %>?_method=DELETE" method="POST">
+                            <button class="btn btn--black comment__btn u-inline-block">Delete Comment</button>
+                        </form>
+                    </div>
+                <% } %>
+                <hr>
             </div>
-        <% }) %>
-    </div>
+        </div>
+    <% }) %>
 </div>
 
 <% include ../partials/footer %>

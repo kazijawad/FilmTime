@@ -1,7 +1,7 @@
 body {
     font-family: 'Sunflower', sans-serif;
     font-weight: 400;
-    color: #fff;
+    color: $color-white;
 }
 
 .heading-primary {
@@ -10,19 +10,4 @@ body {
 
 .heading-secondary {
     font-size: 3rem;
-    color: #a2aec1;
-}
-
-.text-box {
-    padding: 4rem;
-}
-
-.comment-box {
-    padding: 0 4rem;
-}
-
-.error-message {
-    margin-top: 10rem;
-    font-size: 4rem;
-    color: #161e2b;
 }

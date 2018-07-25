@@ -4,6 +4,11 @@
     padding: 3rem 30rem;
     background-image: linear-gradient(to top, #323842, #161e2b);
     justify-content: space-between;
+    color: $color-blue-light;
+
+    &__brand {
+        color: $color-blue-light;
+    }
 
     &__nav {
         align-self: center;
@@ -12,7 +17,7 @@
 
     &__nav-item {
         text-decoration: none;
-        color: #a2aec1;
+        color: $color-blue-light;
 
         &:not(:last-child) {
             margin: 2rem;
