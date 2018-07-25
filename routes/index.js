@@ -58,4 +58,15 @@ router.get('/logout', (req, res) => {
 	res.redirect('/movies');
 });
 
+// USER PROFILE
+router.get('/users/:id', (req, res) => {
+	User.findById(req.params.id, (error, foundUser) => {
+		if (error) {
+			req.flash('error', 'Failed to find that user!');
+			return res.redirect('/');
+		}
+		res.render('users/show', { user: foundUser });
+	});
+});
+
 module.exports = router;
