@@ -18,19 +18,7 @@ body {
   font-size: 5rem; }
 
 .heading-secondary {
-  font-size: 3rem;
-  color: #a2aec1; }
-
-.text-box {
-  padding: 4rem; }
-
-.comment-box {
-  padding: 0 4rem; }
-
-.error-message {
-  margin-top: 10rem;
-  font-size: 4rem;
-  color: #161e2b; }
+  font-size: 3rem; }
 
 .u-text-decoration {
   text-decoration: none; }
@@ -113,7 +101,8 @@ body {
     color: #a2aec1; }
 
 .comment {
-  margin-bottom: 2rem; }
+  margin-bottom: 2rem;
+  padding: 0 4rem; }
   .comment__user {
     font-size: 2.5rem;
     color: #a2aec1; }
@@ -148,7 +137,7 @@ body {
   padding: 1.5rem;
   font-size: 3rem;
   background-image: linear-gradient(to right, #323842, #161e2b);
-  box-shadow: 0 4rem 5rem 2rem rgba(0, 0, 0, 0.6); }
+  box-shadow: 0 2rem 5rem 2rem rgba(0, 0, 0, 0.6); }
 
 .form {
   margin: 6rem 0;
@@ -170,19 +159,22 @@ body {
     padding-bottom: 1rem; }
   .form__input {
     padding: 1rem;
-    border: .2rem solid #38475e; }
+    border: 0.2rem solid #38475e; }
   .form__search {
     font-size: 1.5rem;
     margin-top: 3rem;
     padding: 1rem;
-    border: .2rem solid #38475e; }
+    border: 0.2rem solid #38475e; }
 
 .header {
   display: flex;
   margin: 0;
   padding: 3rem 30rem;
   background-image: linear-gradient(to top, #323842, #161e2b);
-  justify-content: space-between; }
+  justify-content: space-between;
+  color: #a2aec1; }
+  .header__brand {
+    color: #a2aec1; }
   .header__nav {
     align-self: center;
     font-size: 2rem; }
@@ -210,6 +202,7 @@ body {
 
 .section-new {
   margin: 3rem 30rem;
+  padding: 4rem;
   background-image: linear-gradient(to right, #323842, #161e2b);
   box-shadow: 0 4rem 8rem 2rem rgba(0, 0, 0, 0.4); }
 
@@ -218,6 +211,10 @@ body {
   flex-wrap: wrap;
   justify-content: space-around;
   margin: 0 30rem; }
+  .section-view__error {
+    margin-top: 10rem;
+    font-size: 4rem;
+    color: #161e2b; }
 
 .section-show {
   margin: 3rem 30rem;

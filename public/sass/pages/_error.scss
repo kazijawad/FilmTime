@@ -6,8 +6,8 @@
     top: 0;
     left: 0;
     padding-left: 36rem;
-    background-image: linear-gradient(to bottom right, #323842, #161e2b);
-    color: #fff;
+    background-image: linear-gradient(to bottom right, $color-grey-dark, $color-blue-dark);
+    color: $color-white;
 
     &__heading {
         font-size: 12rem;

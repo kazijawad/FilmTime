@@ -4,13 +4,13 @@
 
     &__user {
         font-size: 2.5rem;
-        color: #a2aec1;
+        color: $color-grey-light;
     }
 
     &__time {
         font-size: 1.5rem;
         font-style: italic;
-        color: #a2aec1;
+        color: $color-grey-light;
     }
 
     &__text {

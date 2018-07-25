@@ -2,8 +2,8 @@
     margin: 1rem 0;
     padding: 2rem;
     width: 30rem;
-    background-image: linear-gradient(to top, #323842, #161e2b);
-    box-shadow: 0 4rem 10rem 0 rgba(0, 0, 0, 0.4);
+    background-image: linear-gradient(to top, $color-grey-dark, $color-blue-dark);
+    box-shadow: 0 4rem 10rem 0 rgba($color-black, 0.4);
 
     &__title {
         font-size: 2.5rem;
@@ -17,6 +17,6 @@
         -webkit-box-orient: vertical;
         text-overflow: ellipsis;
         overflow: hidden;
-        color: #a2aec1;
+        color: $color-grey-light;
     }
 }

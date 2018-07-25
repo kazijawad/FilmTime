@@ -1,8 +1,8 @@
 .section-new {
     margin: 3rem 30rem;
     padding: 4rem;
-    background-image: linear-gradient(to right, #323842, #161e2b);
-    box-shadow: 0 4rem 8rem 2rem rgba(0, 0, 0, 0.4);
+    background-image: linear-gradient(to right, $color-grey-dark, $color-blue-dark);
+    box-shadow: 0 4rem 8rem 2rem rgba($color-black, 0.4);
 }
 
 .section-view {
@@ -20,11 +20,11 @@
 
 .section-show {
     margin: 3rem 30rem;
-    background-image: linear-gradient(to top left, #323842, #161e2b);
+    background-image: linear-gradient(to top left, $color-grey-dark, $color-blue-dark);
 }
 
 .section-comment {
     margin: 0 30rem;
     padding-bottom: 2rem;
-    background-image: linear-gradient(to bottom right, #323842, #161e2b);
+    background-image: linear-gradient(to bottom right, $color-grey-dark, $color-blue-dark);
 }

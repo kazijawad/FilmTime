@@ -2,12 +2,12 @@
     display: flex;
     margin: 0;
     padding: 3rem 30rem;
-    background-image: linear-gradient(to top, #323842, #161e2b);
+    background-image: linear-gradient(to top, $color-grey-dark, $color-blue-dark);
     justify-content: space-between;
-    color: $color-blue-light;
+    color: $color-grey-light;
 
     &__brand {
-        color: $color-blue-light;
+        color: $color-grey-light;
     }
 
     &__nav {
@@ -17,7 +17,7 @@
 
     &__nav-item {
         text-decoration: none;
-        color: $color-blue-light;
+        color: $color-grey-light;
 
         &:not(:last-child) {
             margin: 2rem;
