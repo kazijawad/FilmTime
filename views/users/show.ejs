@@ -1,8 +1,14 @@
 <% include ../partials/header %>
 
 <div class="section-view">
-    <div class="card">
-        <h3 class="card__title"><%= user.username %></h3>
+    <div class="profile">
+        <h3 class="profile__user"><%= user.username %></h3>
+        <% movies.forEach(movie => { %>
+            <div class="profile__content">
+                <a class="profile__link" href="/movies/<%= movie.id %>"><%= movie.title %></a>
+                <p class="profile__description"><%= movie.description %></p>
+            </div>
+        <% }); %>
     </div>
 </div>
 

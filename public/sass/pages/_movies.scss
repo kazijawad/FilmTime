@@ -1,11 +1,11 @@
-.section-new {
+.movies-new {
     margin: 3rem 30rem;
     padding: 4rem;
     background-image: linear-gradient(to right, $color-grey-dark, $color-blue-dark);
     box-shadow: 0 4rem 8rem 2rem rgba($color-black, 0.4);
 }
 
-.section-view {
+.movies-view {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -18,12 +18,12 @@
     }
 }
 
-.section-show {
+.movies-show {
     margin: 3rem 30rem;
     background-image: linear-gradient(to top left, $color-grey-dark, $color-blue-dark);
 }
 
-.section-comment {
+.movies-comment {
     margin: 0 30rem;
     padding-bottom: 2rem;
     background-image: linear-gradient(to bottom right, $color-grey-dark, $color-blue-dark);

@@ -1,6 +1,6 @@
 <% include ../partials/header %>
 
-<section class="section-new">
+<section class="movies-new">
         <h1 class="heading-primary">View our collection of movies</h1>
         <a class="btn btn--white" href="/movies/new">Add a Movie</a>
         <form action="/movies" method="GET">
@@ -9,7 +9,7 @@
         </form>
 </section>
 
-<section class="section-view">
+<section class="movies-view">
     <% if (noMatch !== null) { %>
         <p class="section-view__error"><%= noMatch %></p>
     <% } %>

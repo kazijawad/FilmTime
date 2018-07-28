@@ -1,0 +1,29 @@
+.profile {
+    margin: 6rem 30rem;
+    padding: 3rem;
+    background-color: $color-blue-dark;
+
+    &__user {
+        padding-bottom: 3rem;
+        font-size: 4rem;
+    }
+
+    &__content {
+        padding-top: 1.5rem;
+        border-top: .2rem solid $color-blue-light;
+        font-size: 3rem;
+
+        &:not(:last-child) {
+            margin-bottom: 3rem;
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+        color: $color-grey-light;
+    }
+
+    &__description {
+        font-size: 2rem;
+    }
+}

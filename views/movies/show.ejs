@@ -1,12 +1,13 @@
 <% include ../partials/header %>
 
-<div class="section-show">
+<div class="movies-show">
     <div class="composition">
         <div class="composition__title">
             <h1><%= movie.title %></h1>
         </div>
         <div class="composition__body">
             <p><%= movie.description %></p>
+            <p class="composition__author">Submitted By: <a class="u-text-decoration u-color-grey-light" href="/users/<%= movie.author.id %>"><%= movie.author.username %></a>, <%= moment(movie.createdAt).fromNow() %></p>
         </div>
         <% if (currentUser && movie.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin) { %>
             <div class="composition__link">
@@ -19,7 +20,7 @@
     </div>
 </div>
 
-<div class="section-comment">
+<div class="movies-comment">
     <a class="btn btn--white btn--comment" href="/movies/<%= movie._id %>/comments/new">Add New Comment</a>
     <% movie.comments.forEach(comment => { %>
         <div class="comment">

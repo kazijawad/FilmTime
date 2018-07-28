@@ -1,6 +1,7 @@
 const express = require('express');
 const passport = require('passport');
 const User = require('../models/user');
+const Movie = require('../models/movie');
 const router = express.Router();
 
 router.get('/', (req, res) => {
@@ -65,7 +66,13 @@ router.get('/users/:id', (req, res) => {
 			req.flash('error', 'Failed to find that user!');
 			return res.redirect('/');
 		}
-		res.render('users/show', { user: foundUser });
+		Movie.find().where('author.id').equals(foundUser._id).exec((err, movies) => {
+			if (err) {
+				req.flash('error', 'Failed to find the movies associated with that user!');
+				return res.redirect('/');
+			}
+			res.render('users/show', { user: foundUser, movies: movies });
+		});
 	});
 });
 
