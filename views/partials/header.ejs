@@ -31,12 +31,13 @@
             </div>
         </header>
 
-        <% if (error && error.length > 0) { %>
-            <div class="flash">
-                <p><%= error %></p>
-            </div>
-        <% } else if (success && success.length > 0) { %>
-            <div class="flash">
-                <p><%= success %></p>
-            </div>
-        <% } %>
+        <main>
+            <% if (error && error.length > 0) { %>
+                <div class="flash">
+                    <p><%= error %></p>
+                </div>
+            <% } else if (success && success.length > 0) { %>
+                <div class="flash">
+                    <p><%= success %></p>
+                </div>
+            <% } %>

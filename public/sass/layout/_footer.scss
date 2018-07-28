@@ -1,0 +1,18 @@
+.footer {
+    margin-top: 10rem;
+    padding: 8rem;
+    background-color: $color-blue-dark;
+
+    &__text {
+        text-align: center;
+    }
+
+    &__brand {
+        font-size: 6rem;
+        color: $color-grey-light;
+    }
+
+    &__about {
+        font-size: 2rem;
+    }
+}
