@@ -153,7 +153,7 @@ body {
   @media only screen and (max-width: 1200px) {
     .flash {
       margin: 2rem 8rem; } }
-  @media only screen and (max-width: 400px) {
+  @media only screen and (max-width: 600px) {
     .flash {
       margin: 1.5rem 3rem; } }
 
@@ -205,7 +205,7 @@ body {
   @media only screen and (max-width: 1200px) {
     .profile {
       margin: 2rem 8rem; } }
-  @media only screen and (max-width: 400px) {
+  @media only screen and (max-width: 600px) {
     .profile {
       margin: 1.5rem 3rem; } }
 
@@ -229,7 +229,7 @@ body {
   @media only screen and (max-width: 1200px) {
     .header {
       padding: 2rem 8rem; } }
-  @media only screen and (max-width: 400px) {
+  @media only screen and (max-width: 600px) {
     .header {
       padding: 1.5rem 3rem; } }
 
@@ -269,7 +269,7 @@ body {
   @media only screen and (max-width: 1200px) {
     .movies-new {
       margin: 2rem 10rem; } }
-  @media only screen and (max-width: 400px) {
+  @media only screen and (max-width: 600px) {
     .movies-new {
       margin: 1.5rem 3rem; } }
 
@@ -286,7 +286,7 @@ body {
   @media only screen and (max-width: 1200px) {
     .movies-view {
       margin: 0 10rem; } }
-  @media only screen and (max-width: 400px) {
+  @media only screen and (max-width: 600px) {
     .movies-view {
       margin: 1.5rem 3rem; } }
 
@@ -296,7 +296,7 @@ body {
   @media only screen and (max-width: 1200px) {
     .movies-show {
       margin: 2rem 8rem; } }
-  @media only screen and (max-width: 400px) {
+  @media only screen and (max-width: 600px) {
     .movies-show {
       margin: 1.5rem 3rem; } }
 
@@ -307,6 +307,6 @@ body {
   @media only screen and (max-width: 1200px) {
     .movies-comment {
       margin: 2rem 8rem; } }
-  @media only screen and (max-width: 400px) {
+  @media only screen and (max-width: 600px) {
     .movies-comment {
       margin: 1.5rem 3rem; } }
