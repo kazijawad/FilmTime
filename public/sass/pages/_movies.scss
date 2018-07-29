@@ -3,6 +3,10 @@
     padding: 4rem;
     background-image: linear-gradient(to right, $color-grey-dark, $color-blue-dark);
     box-shadow: 0 4rem 8rem 2rem rgba($color-black, 0.4);
+
+    @media only screen and (max-width: $scale) {
+        margin: 2rem 10rem;
+    }
 }
 
 .movies-view {
@@ -14,17 +18,30 @@
     &__error {
         margin-top: 10rem;
         font-size: 4rem;
+        text-align: center;
         color: $color-blue-dark;
+    }
+
+    @media only screen and (max-width: $scale) {
+        margin: 0 10rem;
     }
 }
 
 .movies-show {
     margin: 3rem 30rem;
     background-image: linear-gradient(to top left, $color-grey-dark, $color-blue-dark);
+
+    @media only screen and (max-width: $scale) {
+        margin: 2rem 8rem;
+    }
 }
 
 .movies-comment {
     margin: 0 30rem;
     padding-bottom: 2rem;
     background-image: linear-gradient(to bottom right, $color-grey-dark, $color-blue-dark);
+
+    @media only screen and (max-width: $scale) {
+        margin: 2rem 8rem;
+    }
 }

@@ -26,4 +26,8 @@
     &__description {
         font-size: 2rem;
     }
+
+    @media only screen and (max-width: $scale) {
+        margin: 2rem 8rem;
+    }
 }
