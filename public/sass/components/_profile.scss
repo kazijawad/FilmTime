@@ -27,7 +27,11 @@
         font-size: 2rem;
     }
 
-    @media only screen and (max-width: $scale) {
+    @media only screen and (max-width: $tablet) {
         margin: 2rem 8rem;
+    }
+
+    @media only screen and (max-width: $phone) {
+        margin: 1.5rem 3rem;
     }
 }

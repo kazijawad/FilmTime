@@ -114,6 +114,7 @@ body {
   padding: 0 4rem; }
   .comment__user {
     font-size: 2.5rem;
+    font-weight: 600;
     color: #a2aec1; }
   .comment__time {
     font-size: 1.5rem;
@@ -149,6 +150,12 @@ body {
   font-size: 3rem;
   background-image: linear-gradient(to right, #323842, #161e2b);
   box-shadow: 0 2rem 5rem 2rem rgba(0, 0, 0, 0.6); }
+  @media only screen and (max-width: 1200px) {
+    .flash {
+      margin: 2rem 8rem; } }
+  @media only screen and (max-width: 400px) {
+    .flash {
+      margin: 1.5rem 3rem; } }
 
 .form {
   margin: 6rem 0;
@@ -195,6 +202,12 @@ body {
     color: #a2aec1; }
   .profile__description {
     font-size: 2rem; }
+  @media only screen and (max-width: 1200px) {
+    .profile {
+      margin: 2rem 8rem; } }
+  @media only screen and (max-width: 400px) {
+    .profile {
+      margin: 1.5rem 3rem; } }
 
 .header {
   display: flex;
@@ -213,6 +226,12 @@ body {
     color: #a2aec1; }
     .header__nav-item:not(:last-child) {
       margin: 2rem; }
+  @media only screen and (max-width: 1200px) {
+    .header {
+      padding: 2rem 8rem; } }
+  @media only screen and (max-width: 400px) {
+    .header {
+      padding: 1.5rem 3rem; } }
 
 .footer {
   margin-top: 10rem;
@@ -247,6 +266,12 @@ body {
   padding: 4rem;
   background-image: linear-gradient(to right, #323842, #161e2b);
   box-shadow: 0 4rem 8rem 2rem rgba(0, 0, 0, 0.4); }
+  @media only screen and (max-width: 1200px) {
+    .movies-new {
+      margin: 2rem 10rem; } }
+  @media only screen and (max-width: 400px) {
+    .movies-new {
+      margin: 1.5rem 3rem; } }
 
 .movies-view {
   display: flex;
@@ -256,13 +281,32 @@ body {
   .movies-view__error {
     margin-top: 10rem;
     font-size: 4rem;
+    text-align: center;
     color: #161e2b; }
+  @media only screen and (max-width: 1200px) {
+    .movies-view {
+      margin: 0 10rem; } }
+  @media only screen and (max-width: 400px) {
+    .movies-view {
+      margin: 1.5rem 3rem; } }
 
 .movies-show {
   margin: 3rem 30rem;
   background-image: linear-gradient(to top left, #323842, #161e2b); }
+  @media only screen and (max-width: 1200px) {
+    .movies-show {
+      margin: 2rem 8rem; } }
+  @media only screen and (max-width: 400px) {
+    .movies-show {
+      margin: 1.5rem 3rem; } }
 
 .movies-comment {
   margin: 0 30rem;
   padding-bottom: 2rem;
   background-image: linear-gradient(to bottom right, #323842, #161e2b); }
+  @media only screen and (max-width: 1200px) {
+    .movies-comment {
+      margin: 2rem 8rem; } }
+  @media only screen and (max-width: 400px) {
+    .movies-comment {
+      margin: 1.5rem 3rem; } }

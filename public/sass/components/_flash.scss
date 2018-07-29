@@ -5,7 +5,11 @@
     background-image: linear-gradient(to right, $color-grey-dark, $color-blue-dark);
     box-shadow: 0 2rem 5rem 2rem rgba($color-black, 0.6);
 
-    @media only screen and (max-width: $scale) {
+    @media only screen and (max-width: $tablet) {
         margin: 2rem 8rem;
+    }
+
+    @media only screen and (max-width: $phone) {
+        margin: 1.5rem 3rem;
     }
 }

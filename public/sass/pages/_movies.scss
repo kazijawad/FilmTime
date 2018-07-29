@@ -4,8 +4,12 @@
     background-image: linear-gradient(to right, $color-grey-dark, $color-blue-dark);
     box-shadow: 0 4rem 8rem 2rem rgba($color-black, 0.4);
 
-    @media only screen and (max-width: $scale) {
+    @media only screen and (max-width: $tablet) {
         margin: 2rem 10rem;
+    }
+
+    @media only screen and (max-width: $phone) {
+        margin: 1.5rem 3rem;
     }
 }
 
@@ -22,8 +26,12 @@
         color: $color-blue-dark;
     }
 
-    @media only screen and (max-width: $scale) {
+    @media only screen and (max-width: $tablet) {
         margin: 0 10rem;
+    }
+
+    @media only screen and (max-width: $phone) {
+        margin: 1.5rem 3rem;
     }
 }
 
@@ -31,8 +39,12 @@
     margin: 3rem 30rem;
     background-image: linear-gradient(to top left, $color-grey-dark, $color-blue-dark);
 
-    @media only screen and (max-width: $scale) {
+    @media only screen and (max-width: $tablet) {
         margin: 2rem 8rem;
+    }
+
+    @media only screen and (max-width: $phone) {
+        margin: 1.5rem 3rem;
     }
 }
 
@@ -41,7 +53,11 @@
     padding-bottom: 2rem;
     background-image: linear-gradient(to bottom right, $color-grey-dark, $color-blue-dark);
 
-    @media only screen and (max-width: $scale) {
+    @media only screen and (max-width: $tablet) {
         margin: 2rem 8rem;
+    }
+
+    @media only screen and (max-width: $phone) {
+        margin: 1.5rem 3rem;
     }
 }
