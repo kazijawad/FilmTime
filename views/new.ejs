@@ -1,0 +1,23 @@
+<% include partials/header %>
+
+<div class="form">
+    <h1 class="form__title">Reset Password</h1>
+    <div class="form__body">
+        <form action="/reset/<%= token %>" method="POST">
+            <div class="form__item">
+                <label class="form__label" for="password">New Password</label>
+                <input class="form__input" type="password" name="password" placeholder="New Password">
+            </div>
+            <div class="form__item">
+                <label class="form__label" for="confirm">Confirm Password</label>
+                <input class="form__input" type="password" name="confirm" placeholder="Confirm Password">
+            </div>
+            <div class="form__item">
+                <button class="btn btn--black">Reset Password</button>
+            </div>
+        </form>
+        <a class="btn btn--black" href="/login">Go Back</a>
+    </div>
+</div>
+
+<% include partials/footer %>
