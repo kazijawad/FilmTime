@@ -187,9 +187,19 @@ router.get('/users/:id', (req, res) => {
 				req.flash('error', 'Failed to find the movies associated with that user!');
 				return res.redirect('/');
 			}
+			movies.sort(movieCompare);
 			res.render('users/show', { user: foundUser, movies: movies });
 		});
 	});
 });
+
+const movieCompare = (a, b) => {
+	if (a.title < b.title) {
+		return -1;
+	} else if (a.title > b.title) {
+		return 1;
+	}
+	return 0;
+};
 
 module.exports = router;
