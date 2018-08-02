@@ -15,11 +15,13 @@ router.get('/', (req, res) => {
 				noMatch = 'No movies match that query, please try again.';
 			}
 
+			allMovies.sort(movieCompare);
 			res.render('movies/index', { movies: allMovies, noMatch: noMatch, page: 'movies' });
 		});
 	} else {
 		Movie.find({}, (error, allMovies) => {
 			if (error) { return console.error(error); }
+			allMovies.sort(movieCompare);
 			res.render('movies/index', { movies: allMovies, noMatch: noMatch, page: 'movies' });
 		});
 	}
@@ -102,6 +104,15 @@ router.delete('/:id', isLoggedIn, checkUserMovie, (req, res) => {
 
 const escapeRegex = text => {
 	return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&');
+};
+
+const movieCompare = (a, b) => {
+	if (a.title < b.title) {
+		return -1;
+	} else if (a.title > b.title) {
+		return 1;
+	}
+	return 0;
 };
 
 module.exports = router;
