@@ -17,7 +17,13 @@ const movieRoutes = require('./routes/movies');
 const commentRoutes = require('./routes/comments');
 
 // DB CONFIG
-mongoose.connect(process.env.MONGODB_URI);
+mongoose.connect(process.env.MONGODB_URI)
+	.then(() => {
+		console.info('Database connected!');
+	})
+	.catch(error => {
+		console.error(`DATABASE ERROR: ${error}`);
+	});
 
 // APP CONFIG
 app.use(bodyParser.urlencoded({ extended: true }));
