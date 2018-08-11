@@ -1,19 +1,19 @@
 <% include ../partials/header %>
 
 <div class="movies-show">
-    <div class="composition">
-        <div class="composition__title">
+    <div class="content">
+        <div class="content__title">
             <h1><%= movie.title %></h1>
         </div>
-        <div class="composition__body">
+        <div class="content__body">
             <p><%= movie.description %></p>
-            <p class="composition__author">Submitted By: <a class="u-text-decoration u-color-grey-light" href="/users/<%= movie.author.id %>"><%= movie.author.username %></a>, <%= moment(movie.createdAt).fromNow() %></p>
+            <p class="content__author">Submitted By: <a class="u-text-decoration u-color-grey-light" href="/users/<%= movie.author.id %>"><%= movie.author.username %></a>, <%= moment(movie.createdAt).fromNow() %></p>
         </div>
         <% if (currentUser && movie.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin) { %>
-            <div class="composition__link">
+            <div class="content__link">
                 <a class="btn btn--white" href="/movies/<%= movie._id %>/edit">Edit</a>
             </div>
-            <form class="composition__link" action="/movies/<%= movie._id %>?_method=DELETE" method="POST">
+            <form class="content__link" action="/movies/<%= movie._id %>?_method=DELETE" method="POST">
                 <button class="btn btn--white">Delete</button>
             </form>
         <% } %>

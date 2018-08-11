@@ -128,21 +128,21 @@ body {
     .comment__btn:not(:last-child) {
       margin-right: 2rem; }
 
-.composition {
+.content {
   padding: 3rem;
   color: #fff; }
-  .composition__title {
+  .content__title {
     font-size: 3rem;
     padding: 1rem; }
-  .composition__body {
+  .content__body {
     font-size: 2rem;
     padding-left: 1rem;
     padding-right: 4rem; }
-  .composition__author {
+  .content__author {
     padding-top: 2rem; }
-  .composition__link {
+  .content__link {
     display: inline-block; }
-    .composition__link:not(:last-child) {
+    .content__link:not(:last-child) {
       padding-right: 1rem; }
 
 .flash {
