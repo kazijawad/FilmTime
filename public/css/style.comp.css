@@ -190,8 +190,11 @@ body {
   padding: 3rem;
   background-color: #161e2b; }
   .profile__user {
-    padding-bottom: 3rem;
-    font-size: 4rem; }
+    font-size: 4rem;
+    text-align: center; }
+  .profile__title {
+    padding: 1rem 0;
+    font-size: 3rem; }
   .profile__content {
     padding-top: 1.5rem;
     border-top: 0.2rem solid #38475e;
@@ -209,6 +212,55 @@ body {
   @media only screen and (max-width: 600px) {
     .profile {
       margin: 1.5rem 3rem; } }
+
+.slideshow {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  z-index: 0; }
+  .slideshow li {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0;
+    z-index: 0;
+    animation: imageAnimation 50s linear infinite; }
+    .slideshow li:nth-child(1) {
+      background-image: url(https://images4.alphacoders.com/909/909185.jpg); }
+    .slideshow li:nth-child(2) {
+      background-image: url(https://images8.alphacoders.com/560/560736.jpg);
+      animation-delay: 10s; }
+    .slideshow li:nth-child(3) {
+      background-image: url(https://images.alphacoders.com/548/548874.jpg);
+      animation-delay: 20s; }
+    .slideshow li:nth-child(4) {
+      background-image: url(https://images8.alphacoders.com/911/911204.jpg);
+      animation-delay: 30s; }
+    .slideshow li:nth-child(5) {
+      background-image: url(https://images6.alphacoders.com/650/650608.jpg);
+      animation-delay: 40s; }
+
+@keyframes imageAnimation {
+  0% {
+    opacity: 0;
+    animation-timing-function: ease-in; }
+  10% {
+    opacity: 1;
+    animation-timing-function: ease-out; }
+  20% {
+    opacity: 1; }
+  30% {
+    opacity: 0; } }
 
 .header {
   display: flex;
@@ -261,6 +313,18 @@ body {
     margin-top: 25rem; }
   .error__text {
     font-size: 3rem; }
+
+.landing {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 45%;
+  text-align: center;
+  z-index: 1; }
+  .landing__title {
+    font-size: 6rem;
+    color: #000; }
 
 .movies-new {
   margin: 3rem 30rem;

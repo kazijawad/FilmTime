@@ -1,0 +1,11 @@
+.landing {
+	@include absCenter;
+	top: 45%;
+	text-align: center;
+	z-index: 1;
+
+	&__title {	
+		font-size: 6rem;
+		color: $color-black;
+	}
+}

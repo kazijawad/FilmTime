@@ -8,7 +8,7 @@ const Movie = require('../models/movie');
 const router = express.Router();
 
 router.get('/', (req, res) => {
-	res.redirect('/movies');
+	res.render('landing');
 });
 
 // REGISTER
