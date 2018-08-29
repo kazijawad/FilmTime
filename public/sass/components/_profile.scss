@@ -4,9 +4,14 @@
     background-color: $color-blue-dark;
 
     &__user {
-        padding-bottom: 3rem;
-        font-size: 4rem;
-    }
+		font-size: 4rem;
+		text-align: center;
+	}
+	
+	&__title {
+		padding: 1rem 0;
+		font-size: 3rem;
+	}
 
     &__content {
         padding-top: 1.5rem;
