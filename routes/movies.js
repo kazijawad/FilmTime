@@ -56,7 +56,7 @@ router.get('/:id', (req, res) => {
 			req.flash('error', 'Sorry, that movie does not exist!');
 			return res.redirect('/movies');
 		}
-		res.render('movies/show', { movie: foundMovie });
+		res.render('movies/show', { movie: foundMovie, moment: require('moment') });
 	});
 });
 

@@ -51,14 +51,12 @@ router.post('/login', passport.authenticate('local',
 		successRedirect: '/movies',
 		failureRedirect: '/login',
 		failureFlash: true,
-		successFlash: 'Welcome to FilmTime!',
 	}
 ));
 
 // LOGOUT
 router.get('/logout', (req, res) => {
 	req.logout();
-	req.flash('success', 'Goodbye!');
 	res.redirect('/movies');
 });
 
