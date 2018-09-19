@@ -8,15 +8,13 @@ const cookieParser = require('cookie-parser');
 const flash = require('connect-flash');
 const passport = require('passport');
 const LocalStrategy = require('passport-local');
-const User = require('./models/user');
-const app = express();
 
-// ROUTE CONFIG
+const User = require('./models/user');
 const indexRoutes = require('./routes/index');
 const movieRoutes = require('./routes/movies');
 const commentRoutes = require('./routes/comments');
 
-// DB CONFIG
+// MONGO CONFIG
 mongoose.connect(process.env.MONGODB_URI)
 	.then(() => {
 		console.info('Database connected!');
@@ -26,12 +24,12 @@ mongoose.connect(process.env.MONGODB_URI)
 	});
 
 // APP CONFIG
+const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
 app.use(methodOverride('_method'));
 app.use(cookieParser(process.env.SECRET));
-
 app.locals.moment = require('moment');
 
 // PASSPORT CONFIG
