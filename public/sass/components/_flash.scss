@@ -1,15 +1,11 @@
 .flash {
-    margin: 2rem 30rem;
-    padding: 1.5rem;
-    font-size: 3rem;
-    background-image: linear-gradient(to right, $color-grey-dark, $color-blue-dark);
-    box-shadow: 0 2rem 5rem 2rem rgba($color-black, 0.6);
-
-    @media only screen and (max-width: $tablet) {
-        margin: 2rem 8rem;
-    }
-
-    @media only screen and (max-width: $phone) {
-        margin: 1.5rem 3rem;
-    }
+	display: inline-block;
+	margin: 2rem 0;
+    padding: 2rem;
+	font-size: 3rem;
+	text-align: center;
+	border-radius: 2rem;
+	box-shadow: 0 .5rem 3rem .5rem rgba($color-black, 0.5);
+	background-image: linear-gradient(to right, $color-grey-dark, $color-blue-dark);
+	color: #e74c3c;
 }
