@@ -11,24 +11,24 @@
         <link rel="stylesheet" href="../../../../css/style.css">
     </head>
     <body>
-        <header class="header">
-            <div>
-                <a class="u-text-decoration u-inline-block" href="/movies">
-                    <h2 class="header__brand heading-secondary">
-                        FilmTime
-                    </h2>
-                </a>
-            </div>
-            <div class="header__nav">
-                <% if (!currentUser) { %>
-                    <a class="header__nav-item" href="/register">Register</a>
-                    <a class="header__nav-item" href="/login">Login</a>
-                <% } else { %>
-                    <a class="header__nav-item" href="/users/<%= currentUser.id %>">Signed In As <%= currentUser.username %></a>
-                    <a class="header__nav-item" href="/logout">Logout</a>
-                <% } %>
-            </div>
-		</header>
+        <nav class="navbar">
+			<div class="navbar__left">
+				<a class="navbar__brand" href="/movies">FilmTime</a>
+				<form class="navbar__search" action="/movies" method="GET">
+					<input class="navbar__input" type="text" name="search" placeholder="Search Movies...">
+					<input class="navbar__submit" type="submit" value="Search">
+				</form>
+			</div>
+			<div>
+				<% if (!currentUser) { %>
+					<a class="navbar__link" href="/register">Register</a>
+					<a class="navbar__link" href="/login">Login</a>
+				<% } else { %>
+					<a class="navbar__link" href="/users/<%= currentUser.id %>">Signed In As <%= currentUser.username %></a>
+					<a class="navbar__link" href="/logout">Logout</a>
+				<% } %>
+			</div>
+		</nav>
 
         <main>
             <% if (error && error.length > 0) { %>

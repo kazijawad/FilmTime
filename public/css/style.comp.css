@@ -236,18 +236,18 @@ body {
     z-index: 0;
     animation: imageAnimation 50s linear infinite; }
     .slideshow li:nth-child(1) {
-      background-image: url(https://images4.alphacoders.com/909/909185.jpg); }
+      background-image: linear-gradient(to bottom, transparent 0%, #fff 100%), url(https://images4.alphacoders.com/909/909185.jpg); }
     .slideshow li:nth-child(2) {
-      background-image: url(https://images8.alphacoders.com/560/560736.jpg);
+      background-image: linear-gradient(to bottom, transparent 0%, #fff 100%), url(https://images8.alphacoders.com/560/560736.jpg);
       animation-delay: 10s; }
     .slideshow li:nth-child(3) {
-      background-image: url(https://images.alphacoders.com/548/548874.jpg);
+      background-image: linear-gradient(to bottom, transparent 0%, #fff 100%), url(https://images.alphacoders.com/548/548874.jpg);
       animation-delay: 20s; }
     .slideshow li:nth-child(4) {
-      background-image: url(https://images8.alphacoders.com/911/911204.jpg);
+      background-image: linear-gradient(to bottom, transparent 0%, #fff 100%), url(https://images8.alphacoders.com/911/911204.jpg);
       animation-delay: 30s; }
     .slideshow li:nth-child(5) {
-      background-image: url(https://images6.alphacoders.com/650/650608.jpg);
+      background-image: linear-gradient(to bottom, transparent 0%, #fff 100%), url(https://images6.alphacoders.com/650/650608.jpg);
       animation-delay: 40s; }
 
 @keyframes imageAnimation {
@@ -262,29 +262,45 @@ body {
   30% {
     opacity: 0; } }
 
-.header {
+.navbar {
   display: flex;
-  margin: 0;
-  padding: 3rem 30rem;
-  background-image: linear-gradient(to top, #323842, #161e2b);
+  flex-flow: row wrap;
   justify-content: space-between;
+  align-items: center;
+  padding: 2rem 30rem;
+  background: #161e2b;
   color: #a2aec1; }
-  .header__brand {
-    color: #a2aec1; }
-  .header__nav {
-    align-self: center;
-    font-size: 2rem; }
-  .header__nav-item {
+  .navbar__left {
+    display: flex; }
+  .navbar__brand {
+    font-size: 4rem;
     text-decoration: none;
     color: #a2aec1; }
-    .header__nav-item:not(:last-child) {
-      margin: 2rem; }
-  @media only screen and (max-width: 1200px) {
-    .header {
-      padding: 2rem 8rem; } }
-  @media only screen and (max-width: 600px) {
-    .header {
-      padding: 1.5rem 3rem; } }
+  .navbar__search {
+    align-self: center;
+    margin: 0 0 0 2rem; }
+  .navbar__input {
+    padding: .7rem 1rem;
+    border: none;
+    border-radius: 3rem;
+    background: #38475e;
+    color: #a2aec1;
+    outline: none; }
+  .navbar__submit {
+    margin: 0 0 0 1rem;
+    padding: .7rem 1rem;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 2rem;
+    background: #a2aec1;
+    color: #38475e;
+    cursor: pointer; }
+  .navbar__link {
+    font-size: 2rem;
+    text-decoration: none;
+    color: #a2aec1; }
+    .navbar__link:not(:last-child) {
+      margin-right: 3rem; }
 
 .footer {
   margin-top: 10rem;
