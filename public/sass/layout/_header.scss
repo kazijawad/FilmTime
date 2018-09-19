@@ -1,11 +1,19 @@
 .navbar {
 	display: flex;
-	flex-flow: row wrap;
+	flex-flow: row nowrap;
 	justify-content: space-between;
 	align-items: center;
 	padding: 2rem 30rem;
     background: $color-blue-dark;
 	color: $color-grey-light;
+
+	@include response(laptop) {
+		padding: 2rem 10rem;
+	}
+
+	@include response(phone) {
+		padding: 1.5rem 3rem;
+	}
 
 	&__left {
 		display: flex;
@@ -14,12 +22,20 @@
     &__brand {
 		font-size: 4rem;
 		text-decoration: none;
-        color: $color-grey-light;
+		color: $color-grey-light;
+		
+		@include response(phone) {
+			font-size: 3rem;
+		}
 	}
 	
 	&__search {
 		align-self: center;
 		margin: 0 0 0 2rem;
+
+		@include response(phone) {
+			display: none;
+		}
 	}
 
 	&__input {

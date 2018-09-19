@@ -271,26 +271,44 @@ body {
     font-size: 6rem;
     text-decoration: none;
     color: #a2aec1; }
+    @media only screen and (max-width: 600px) {
+      .footer__brand {
+        font-size: 5rem; } }
   .footer__about {
     font-size: 2rem; }
+    @media only screen and (max-width: 600px) {
+      .footer__about {
+        font-size: 1.5rem; } }
 
 .navbar {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
   padding: 2rem 30rem;
   background: #161e2b;
   color: #a2aec1; }
+  @media only screen and (max-width: 1500px) {
+    .navbar {
+      padding: 2rem 10rem; } }
+  @media only screen and (max-width: 600px) {
+    .navbar {
+      padding: 1.5rem 3rem; } }
   .navbar__left {
     display: flex; }
   .navbar__brand {
     font-size: 4rem;
     text-decoration: none;
     color: #a2aec1; }
+    @media only screen and (max-width: 600px) {
+      .navbar__brand {
+        font-size: 3rem; } }
   .navbar__search {
     align-self: center;
     margin: 0 0 0 2rem; }
+    @media only screen and (max-width: 600px) {
+      .navbar__search {
+        display: none; } }
   .navbar__input {
     padding: .7rem 1rem;
     border: none;
@@ -339,10 +357,9 @@ body {
 
 .landing {
   position: absolute;
-  top: 50%;
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
-  top: 45%;
   text-align: center;
   z-index: 1; }
   .landing__title {
