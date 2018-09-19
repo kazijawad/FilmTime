@@ -1,14 +1,14 @@
 .footer {
-    margin-top: 10rem;
-    padding: 8rem;
+	display: flex;
+	flex-flow: column nowrap;
+	margin: 10rem 0 0 0;
+	padding: 8rem;
+	text-align: center;
     background-color: $color-blue-dark;
 
-    &__text {
-        text-align: center;
-    }
-
     &__brand {
-        font-size: 6rem;
+		font-size: 6rem;
+		text-decoration: none;
         color: $color-grey-light;
     }
 

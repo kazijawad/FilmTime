@@ -29,9 +29,8 @@
 				<% } %>
 			</div>
 		</nav>
-
-        <main>
-            <% if (error && error.length > 0) { %>
+		<header class="header">
+			 <% if (error && error.length > 0) { %>
                 <div class="flash">
                     <p><%= error %></p>
                 </div>
@@ -40,3 +39,5 @@
                     <p><%= success %></p>
                 </div>
             <% } %>
+		</header>
+        <main>
