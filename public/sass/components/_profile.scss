@@ -32,11 +32,11 @@
         font-size: 2rem;
     }
 
-    @media only screen and (max-width: $tablet) {
+    @include response(laptop) {
         margin: 2rem 8rem;
     }
 
-    @media only screen and (max-width: $phone) {
+    @include response(phone) {
         margin: 1.5rem 3rem;
     }
 }

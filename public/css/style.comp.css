@@ -22,9 +22,9 @@ body {
 
 .heading-primary {
   font-size: 5rem; }
-
-.heading-secondary {
-  font-size: 3rem; }
+  @media only screen and (max-width: 600px) {
+    .heading-primary {
+      font-size: 4rem; } }
 
 .u-text-decoration {
   text-decoration: none; }
@@ -88,6 +88,9 @@ body {
 
 .btn--comment {
   margin: 5rem 3rem !important; }
+  @media only screen and (max-width: 600px) {
+    .btn--comment {
+      margin: 3rem 0 !important; } }
 
 .btn--mini {
   padding: .5rem 1rem; }
@@ -116,28 +119,52 @@ body {
   .comment__user {
     font-size: 2.5rem;
     font-weight: 600;
+    text-decoration: none;
     color: #a2aec1; }
+    @media only screen and (max-width: 600px) {
+      .comment__user {
+        font-weight: 500;
+        margin: 0 1rem 0 0; } }
   .comment__time {
     font-size: 1.5rem;
     font-style: italic;
     color: #a2aec1; }
   .comment__text {
     font-size: 2.3rem; }
+    @media only screen and (max-width: 600px) {
+      .comment__text {
+        font-size: 2rem; } }
   .comment__btn {
     font-size: 1rem !important; }
     .comment__btn:not(:last-child) {
       margin-right: 2rem; }
+    @media only screen and (max-width: 600px) {
+      .comment__btn {
+        text-align: center; }
+        .comment__btn:not(:last-child) {
+          margin-right: 0; } }
 
 .content {
   padding: 3rem;
   color: #fff; }
+  @media only screen and (max-width: 600px) {
+    .content {
+      padding: 3rem 2rem;
+      text-align: center; } }
   .content__title {
     font-size: 3rem;
     padding: 1rem; }
+    @media only screen and (max-width: 600px) {
+      .content__title {
+        font-size: 2.5rem;
+        padding: 0; } }
   .content__body {
     font-size: 2rem;
-    padding-left: 1rem;
-    padding-right: 4rem; }
+    padding: 0 4rem 0 1rem; }
+    @media only screen and (max-width: 600px) {
+      .content__body {
+        margin: 2rem 0 0 0;
+        padding: 0 2rem; } }
   .content__author {
     padding-top: 2rem; }
   .content__link {
@@ -204,7 +231,7 @@ body {
     color: #a2aec1; }
   .profile__description {
     font-size: 2rem; }
-  @media only screen and (max-width: 1200px) {
+  @media only screen and (max-width: 1500px) {
     .profile {
       margin: 2rem 8rem; } }
   @media only screen and (max-width: 600px) {
@@ -302,7 +329,7 @@ body {
     color: #a2aec1; }
     @media only screen and (max-width: 600px) {
       .navbar__brand {
-        font-size: 3rem; } }
+        font-size: 2rem; } }
   .navbar__search {
     align-self: center;
     margin: 0 0 0 2rem; }
@@ -333,6 +360,11 @@ body {
     color: #a2aec1; }
     .navbar__link:not(:last-child) {
       margin-right: 3rem; }
+    @media only screen and (max-width: 600px) {
+      .navbar__link {
+        font-size: 1.5rem; }
+        .navbar__link:not(:last-child) {
+          margin-right: 1rem; } }
 
 .header {
   display: flex;
@@ -371,12 +403,13 @@ body {
   padding: 4rem;
   background-image: linear-gradient(to right, #323842, #161e2b);
   box-shadow: 0 4rem 8rem 2rem rgba(0, 0, 0, 0.4); }
-  @media only screen and (max-width: 1200px) {
+  @media only screen and (max-width: 1500px) {
     .movies-new {
       margin: 2rem 10rem; } }
   @media only screen and (max-width: 600px) {
     .movies-new {
-      margin: 1.5rem 3rem; } }
+      margin: 1.5rem 3rem;
+      text-align: center; } }
 
 .movies-view {
   display: flex;
@@ -388,7 +421,7 @@ body {
     font-size: 4rem;
     text-align: center;
     color: #161e2b; }
-  @media only screen and (max-width: 1200px) {
+  @media only screen and (max-width: 1500px) {
     .movies-view {
       margin: 0 10rem; } }
   @media only screen and (max-width: 600px) {
@@ -398,7 +431,7 @@ body {
 .movies-show {
   margin: 3rem 30rem;
   background-image: linear-gradient(to top left, #323842, #161e2b); }
-  @media only screen and (max-width: 1200px) {
+  @media only screen and (max-width: 1500px) {
     .movies-show {
       margin: 2rem 8rem; } }
   @media only screen and (max-width: 600px) {
@@ -409,9 +442,10 @@ body {
   margin: 0 30rem;
   padding-bottom: 2rem;
   background-image: linear-gradient(to bottom right, #323842, #161e2b); }
-  @media only screen and (max-width: 1200px) {
+  @media only screen and (max-width: 1500px) {
     .movies-comment {
       margin: 2rem 8rem; } }
   @media only screen and (max-width: 600px) {
     .movies-comment {
-      margin: 1.5rem 3rem; } }
+      margin: 1.5rem 3rem;
+      text-align: center; } }

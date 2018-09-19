@@ -4,12 +4,13 @@
     background-image: linear-gradient(to right, $color-grey-dark, $color-blue-dark);
     box-shadow: 0 4rem 8rem 2rem rgba($color-black, 0.4);
 
-    @media only screen and (max-width: $tablet) {
+    @include response(laptop) {
         margin: 2rem 10rem;
     }
 
-    @media only screen and (max-width: $phone) {
-        margin: 1.5rem 3rem;
+    @include response(phone) {
+		margin: 1.5rem 3rem;
+		text-align: center;
     }
 }
 
@@ -26,11 +27,11 @@
         color: $color-blue-dark;
     }
 
-    @media only screen and (max-width: $tablet) {
+    @include response(laptop) {
         margin: 0 10rem;
     }
 
-    @media only screen and (max-width: $phone) {
+    @include response(phone) {
         margin: 1.5rem 3rem;
     }
 }
@@ -39,11 +40,11 @@
     margin: 3rem 30rem;
     background-image: linear-gradient(to top left, $color-grey-dark, $color-blue-dark);
 
-    @media only screen and (max-width: $tablet) {
+    @include response(laptop) {
         margin: 2rem 8rem;
     }
 
-    @media only screen and (max-width: $phone) {
+    @include response(phone) {
         margin: 1.5rem 3rem;
     }
 }
@@ -53,11 +54,12 @@
     padding-bottom: 2rem;
     background-image: linear-gradient(to bottom right, $color-grey-dark, $color-blue-dark);
 
-    @media only screen and (max-width: $tablet) {
+    @include response(laptop) {
         margin: 2rem 8rem;
     }
 
-    @media only screen and (max-width: $phone) {
-        margin: 1.5rem 3rem;
+    @include response(phone) {
+		margin: 1.5rem 3rem;
+		text-align: center;
     }
 }

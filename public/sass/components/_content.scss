@@ -1,16 +1,30 @@
 .content {
     padding: 3rem;
-    color: $color-white;
+	color: $color-white;
+	
+	@include response(phone) {
+		padding: 3rem 2rem;
+		text-align: center;
+	}
 
     &__title {
         font-size: 3rem;
-        padding: 1rem;
+		padding: 1rem;
+
+		@include response(phone) {
+			font-size: 2.5rem;
+			padding: 0;
+		}
     }
 
     &__body {
         font-size: 2rem;
-        padding-left: 1rem; 
-        padding-right: 4rem;
+        padding: 0 4rem 0 1rem; 
+		
+		@include response(phone) {
+			margin: 2rem 0 0 0;
+			padding: 0 2rem;
+		}
     }
 
     &__author {

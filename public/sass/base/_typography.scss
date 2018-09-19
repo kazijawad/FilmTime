@@ -5,9 +5,9 @@ body {
 }
 
 .heading-primary {
-    font-size: 5rem;
-}
-
-.heading-secondary {
-    font-size: 3rem;
+	font-size: 5rem;
+	
+	@include response(phone) {
+		font-size: 4rem;
+	}
 }

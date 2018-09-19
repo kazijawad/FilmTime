@@ -4,8 +4,14 @@
 
     &__user {
         font-size: 2.5rem;
-        font-weight: 600;
-        color: $color-grey-light;
+		font-weight: 600;
+		text-decoration: none;
+		color: $color-grey-light;
+		
+		@include response(phone) {
+			font-weight: 500;
+			margin: 0 1rem 0 0;
+		}
     }
 
     &__time {
@@ -15,7 +21,11 @@
     }
 
     &__text {
-        font-size: 2.3rem;
+		font-size: 2.3rem;
+		
+		@include response(phone) {
+			font-size: 2rem;
+		}
     }
 
     &__btn {
@@ -23,6 +33,14 @@
 
         &:not(:last-child) {
             margin-right: 2rem;
-        }
+		}
+		
+		@include response(phone) {
+			text-align: center;
+
+			&:not(:last-child) {
+            	margin-right: 0;
+			}
+		}
     }
 }
