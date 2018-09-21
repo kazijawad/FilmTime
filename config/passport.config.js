@@ -12,16 +12,4 @@ passport.deserializeUser((id, done) => {
 	});
 });
 
-passport.use(new LocalStrategy(
-	(username, password, done) => {
-		User.findOne({ username: username }, (error, user) => {
-			if (error) return done(error);
-			if (!user) {
-				return done(null, false, { message: 'Incorrect Username' });
-			}
-			user.validPassword(password);
-
-			return done(null, user);
-		});
-	}
-));
+passport.use(new LocalStrategy(User.authenticate()));

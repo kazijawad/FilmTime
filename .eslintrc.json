@@ -64,9 +64,6 @@
                 "maxBOF": 0
             }
         ],
-        "no-shadow": [
-            "error"
-        ],
         "no-trailing-spaces": [
             "error"
         ],
