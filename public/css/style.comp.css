@@ -399,18 +399,22 @@ body {
     font-size: 6rem;
     color: #000; }
 
-.movies-new {
-  margin: 3rem 30rem;
-  padding: 4rem;
+.movies-cover {
+  padding: 4rem 30rem;
+  text-align: center;
   background-image: linear-gradient(to right, #323842, #161e2b);
-  box-shadow: 0 4rem 8rem 2rem rgba(0, 0, 0, 0.4); }
+  box-shadow: 0 1rem 10rem 1rem rgba(0, 0, 0, 0.4); }
   @media only screen and (max-width: 1500px) {
-    .movies-new {
-      margin: 2rem 10rem; } }
+    .movies-cover {
+      padding: 4rem 10rem; } }
   @media only screen and (max-width: 600px) {
-    .movies-new {
-      margin: 1.5rem 3rem;
-      text-align: center; } }
+    .movies-cover {
+      padding: 2rem 3rem; } }
+  .movies-cover__text {
+    font-size: 4rem; }
+    @media only screen and (max-width: 600px) {
+      .movies-cover__text {
+        font-size: 2rem; } }
 
 .movies-view {
   display: flex;
