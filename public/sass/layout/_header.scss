@@ -77,6 +77,15 @@
 			}
 		}
 	}
+
+	&__btn {
+		margin-top: 0 !important;
+		color: $color-blue-dark;
+
+		@include response(tablet) {
+			display: none !important;
+		}
+	}
 }
 
 .header {

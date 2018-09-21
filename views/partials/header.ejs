@@ -24,6 +24,7 @@
 					<a class="navbar__link" href="/register">Register</a>
 					<a class="navbar__link" href="/login">Login</a>
 				<% } else { %>
+					<a class="navbar__link navbar__btn btn btn--white" href="/movies/new">Add a Movie</a>
 					<a class="navbar__link" href="/users/<%= currentUser.id %>">Signed In As <%= currentUser.username %></a>
 					<a class="navbar__link" href="/logout">Logout</a>
 				<% } %>
