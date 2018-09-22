@@ -3,16 +3,9 @@ const mongoose = require('mongoose');
 const movieSchema = new mongoose.Schema({
 	title: String,
 	description: String,
-	createdAt: {
-		type: Date,
-		default: Date.now,
-	},
-	author: {
-		id: {
-			type: mongoose.Schema.Types.ObjectId,
-			ref: 'User',
-		},
-		username: String,
+	poster: {
+		type: Buffer,
+		mimeType: String,
 	},
 	comments: [
 		{
@@ -20,6 +13,17 @@ const movieSchema = new mongoose.Schema({
 			ref: 'Comment',
 		},
 	],
+	author: {
+		id: {
+			type: mongoose.Schema.Types.ObjectId,
+			ref: 'User',
+		},
+		username: String,
+	},
+	createdAt: {
+		type: Date,
+		default: Date.now,
+	},
 });
 
 module.exports = mongoose.model('Movie', movieSchema);

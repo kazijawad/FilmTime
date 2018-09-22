@@ -3,6 +3,7 @@ require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
+const multer = require('multer');
 const methodOverride = require('method-override');
 const cookieParser = require('cookie-parser');
 const flash = require('connect-flash');
@@ -16,8 +17,10 @@ const commentRoutes = require('./routes/comments');
 
 // APP CONFIG
 const app = express();
+const storage = multer.memoryStorage();
 
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(multer({ storage: storage }).single('poster'));
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
 app.use(methodOverride('_method'));

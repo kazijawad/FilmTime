@@ -31,12 +31,16 @@ router.get('/', (req, res) => {
 router.post('/', isLoggedIn, (req, res) => {
 	const title = req.body.title;
 	const description = req.body.description;
+	const poster = {
+		type: req.file.buffer,
+		mimeType: req.file.mimetype,
+	};
 	const author = {
 		id: req.user._id,
 		username: req.user.username,
 	};
 
-	const newMovie = { title: title, description: description, author: author };
+	const newMovie = { title: title, description: description, poster: poster, author: author };
 	Movie.create(newMovie, (error) => {
 		if (error) { return console.error(error); }
 		res.redirect('/movies');
@@ -67,8 +71,14 @@ router.get('/:id/edit', isLoggedIn, checkUserMovie, (req, res) => {
 
 // UPDATE
 router.put('/:id', (req, res) => {
-	const newData = { title: req.body.title, description: req.body.description };
+	const title = req.body.title;
+	const description = req.body.description;
+	const poster = {
+		type: req.file.buffer,
+		mimeType: req.file.mimetype,
+	};
 
+	const newData = { title: title, description: description, poster: poster };
 	Movie.findByIdAndUpdate(req.params.id, { $set: newData }, (error, movie) => {
 		if (error) {
 			req.flash('error', error.message);
