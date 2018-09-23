@@ -31,10 +31,7 @@ router.get('/', (req, res) => {
 router.post('/', isLoggedIn, (req, res) => {
 	const title = req.body.title;
 	const description = req.body.description;
-	const poster = {
-		type: req.file.buffer,
-		mimeType: req.file.mimetype,
-	};
+	const poster = req.file ? req.file.buffer : null;
 	const author = {
 		id: req.user._id,
 		username: req.user.username,
@@ -57,7 +54,7 @@ router.get('/:id', (req, res) => {
 	Movie.findById(req.params.id).populate('comments').exec((error, foundMovie) => {
 		if (error || !foundMovie) {
 			console.error(error);
-			req.flash('error', 'Sorry, that movie does not exist!');
+			req.flash('error', 'That movie does not exist.');
 			return res.redirect('/movies');
 		}
 		res.render('movies/show', { movie: foundMovie, moment: require('moment') });
@@ -73,18 +70,14 @@ router.get('/:id/edit', isLoggedIn, checkUserMovie, (req, res) => {
 router.put('/:id', (req, res) => {
 	const title = req.body.title;
 	const description = req.body.description;
-	const poster = {
-		type: req.file.buffer,
-		mimeType: req.file.mimetype,
-	};
+	const poster = req.file ? req.file.buffer : null;
+	const newData = poster ? { title: title, description: description, poster: poster } : { title: title, description: description };
 
-	const newData = { title: title, description: description, poster: poster };
 	Movie.findByIdAndUpdate(req.params.id, { $set: newData }, (error, movie) => {
 		if (error) {
 			req.flash('error', error.message);
 			return res.redirect('back');
 		}
-		req.flash('success', 'Successfully Updated!');
 		res.redirect(movie._id);
 	});
 });
@@ -106,7 +99,7 @@ router.delete('/:id', isLoggedIn, checkUserMovie, (req, res) => {
 				req.flash('error', err.message);
 				return res.redirect('/');
 			}
-			req.flash('error', 'Movie deleted!');
+			req.flash('error', 'Movie Deleted');
 			res.redirect('/movies');
 		});
 	});
