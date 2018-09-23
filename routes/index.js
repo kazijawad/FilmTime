@@ -13,6 +13,9 @@ router.get('/', (req, res) => {
 
 // REGISTER
 router.get('/register', (req, res) => {
+	if (req.user) {
+		return res.redirect('/movies');
+	}
 	res.render('auth/register', { page: 'register' });
 });
 
@@ -43,6 +46,9 @@ router.post('/register', (req, res) => {
 
 // LOGIN
 router.get('/login', (req, res) => {
+	if (req.user) {
+		return res.redirect('/movies');
+	}
 	res.render('auth/login', { page: 'login' });
 });
 
