@@ -11,11 +11,16 @@
 
     <% movies.forEach(movie => { %>
         <div class="card">
-            <h3 class="card__title"><%= movie.title %></h3>
-            <p class="card__description"><%= movie.description %></p>
-            <p class="card__link">
-                <a class="btn btn--white" href="movies/<%= movie._id %>">More Info</a>
-            </p>
+			<div>
+				<% if (movie.poster !== null) { %>
+					<img class="card__img" src="data:<%= movie.poster.mimeType %>;base64,<%= movie.poster.data.toString('base64') %>" />
+				<% } %>
+			</div>
+			<div>
+				<h3 class="card__title"><%= movie.title %></h3>
+				<p class="card__description"><%= movie.description %></p>
+				<a class="card__link" href="movies/<%= movie._id %>">More Info</a>
+			</div> 
         </div>
     <% }); %>
 </section>

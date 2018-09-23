@@ -31,7 +31,7 @@ router.get('/', (req, res) => {
 router.post('/', isLoggedIn, (req, res) => {
 	const title = req.body.title;
 	const description = req.body.description;
-	const poster = req.file ? req.file.buffer : null;
+	const poster = req.file ? { data: req.file.buffer, mimeType: req.file.mimetype } : null;
 	const author = {
 		id: req.user._id,
 		username: req.user.username,
@@ -70,7 +70,7 @@ router.get('/:id/edit', isLoggedIn, checkUserMovie, (req, res) => {
 router.put('/:id', (req, res) => {
 	const title = req.body.title;
 	const description = req.body.description;
-	const poster = req.file ? req.file.buffer : null;
+	const poster = req.file ? { data: req.file.buffer, mimeType: req.file.mimetype } : null;
 	const newData = poster ? { title: title, description: description, poster: poster } : { title: title, description: description };
 
 	Movie.findByIdAndUpdate(req.params.id, { $set: newData }, (error, movie) => {
