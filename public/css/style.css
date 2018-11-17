@@ -49,7 +49,7 @@ body {
 
 .btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 1rem 2rem rgba(255, 255, 255, 0.2); }
+  box-shadow: 0 0.5rem 1rem rgba(255, 255, 255, 0.2); }
   .btn:hover::after {
     transform: scaleX(1.4) scaleY(1.6);
     opacity: 0; }
@@ -424,7 +424,9 @@ body {
   text-align: center;
   z-index: 1; }
   .landing__title {
-    font-size: 6rem;
+    font-size: 8rem;
+    font-weight: 300;
+    font-style: oblique;
     color: #000; }
 
 .movies-cover {
