@@ -11,6 +11,10 @@
 		padding: 2rem 10rem;
 	}
 
+	@include response(tablet) {
+		padding: 2rem 5rem;
+	}
+
 	@include response(phone) {
 		padding: 1.5rem 3rem;
 	}
@@ -23,6 +27,10 @@
 		font-size: 4rem;
 		text-decoration: none;
 		color: $color-grey-light;
+
+		@include response(tablet) {
+			font-size: 2.5rem;
+		}
 		
 		@include response(phone) {
 			font-size: 2rem;
@@ -45,6 +53,11 @@
 		background: $color-blue-light;
 		color: $color-grey-light;
 		outline: none;
+
+		@include response(tablet) {
+			padding: .5rem .7rem;
+			width: 40%;
+		}
 	}
 
 	&__submit {
@@ -58,6 +71,11 @@
 		background: $color-grey-light;
 		color: $color-blue-light;
 		cursor: pointer;
+
+		@include response(tablet) {
+			padding: .5rem .7rem;
+			font-size: 1.3rem;
+		}
 	}
 
 	&__link {
@@ -69,7 +87,7 @@
 			margin-right: 3rem;
 		}
 
-		@include response(phone) {
+		@include response(tablet) {
 			font-size: 1.5rem;
 
 			&:not(:last-child) {
