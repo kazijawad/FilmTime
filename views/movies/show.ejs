@@ -1,6 +1,9 @@
 <% include ../partials/header %>
 
 <div class="movies-show">
+	<div>
+		<img class="movies-show__poster" src="data:<%= movie.poster.mimeType %>;base64,<%= movie.poster.data.toString('base64') %>" />
+	</div>
     <div class="content">
         <div class="content__title">
             <h1><%= movie.title %></h1>

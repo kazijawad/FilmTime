@@ -49,7 +49,7 @@ body {
 
 .btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 1rem 2rem rgba(255, 255, 255, 0.2); }
+  box-shadow: 0 0.5rem 1rem rgba(255, 255, 255, 0.2); }
   .btn:hover::after {
     transform: scaleX(1.4) scaleY(1.6);
     opacity: 0; }
@@ -93,22 +93,50 @@ body {
   padding: .5rem 1rem; }
 
 .card {
+  display: flex;
+  flex-direction: row;
   margin: 1rem 0;
-  padding: 2rem;
-  width: 30rem;
+  width: 50rem;
   background-image: linear-gradient(to top, #323842, #161e2b);
-  box-shadow: 0 4rem 10rem 0 rgba(0, 0, 0, 0.4); }
+  box-shadow: 0 2rem 10rem 0 rgba(0, 0, 0, 0.4); }
+  @media only screen and (max-width: 600px) {
+    .card {
+      flex-direction: column;
+      width: 20rem; } }
+  .card__img {
+    width: 20rem;
+    height: 100%; }
   .card__title {
-    font-size: 2.5rem; }
+    vertical-align: top;
+    margin: 1rem 0 1rem 2rem;
+    font-size: 2rem; }
+    @media only screen and (max-width: 600px) {
+      .card__title {
+        margin: 1rem 0 .2rem 1rem; } }
   .card__description {
-    padding-top: 1rem;
-    font-size: 2rem;
     display: -webkit-box;
-    -webkit-line-clamp: 6;
+    margin: 0 4rem 0 2rem;
+    font-size: 1.3rem;
+    -webkit-line-clamp: 10;
     -webkit-box-orient: vertical;
     text-overflow: ellipsis;
     overflow: hidden;
     color: #a2aec1; }
+    @media only screen and (max-width: 600px) {
+      .card__description {
+        display: none; } }
+  .card__link {
+    display: block;
+    margin: 5rem 2rem 0 2rem;
+    padding: .8rem 0 0 0;
+    border-top: 0.1rem solid #fff;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #fff; }
+    @media only screen and (max-width: 600px) {
+      .card__link {
+        margin: 0 0 .5rem 1rem;
+        border: none; } }
 
 .comment {
   margin-bottom: 2rem;
@@ -313,6 +341,9 @@ body {
   @media only screen and (max-width: 1500px) {
     .navbar {
       padding: 2rem 10rem; } }
+  @media only screen and (max-width: 1100px) {
+    .navbar {
+      padding: 2rem 5rem; } }
   @media only screen and (max-width: 600px) {
     .navbar {
       padding: 1.5rem 3rem; } }
@@ -322,6 +353,9 @@ body {
     font-size: 4rem;
     text-decoration: none;
     color: #a2aec1; }
+    @media only screen and (max-width: 1100px) {
+      .navbar__brand {
+        font-size: 2.5rem; } }
     @media only screen and (max-width: 600px) {
       .navbar__brand {
         font-size: 2rem; } }
@@ -338,6 +372,10 @@ body {
     background: #38475e;
     color: #a2aec1;
     outline: none; }
+    @media only screen and (max-width: 1100px) {
+      .navbar__input {
+        padding: .5rem .7rem;
+        width: 40%; } }
   .navbar__submit {
     margin: 0 0 0 1rem;
     padding: .7rem 1rem;
@@ -349,13 +387,17 @@ body {
     background: #a2aec1;
     color: #38475e;
     cursor: pointer; }
+    @media only screen and (max-width: 1100px) {
+      .navbar__submit {
+        padding: .5rem .7rem;
+        font-size: 1.3rem; } }
   .navbar__link {
     font-size: 2rem;
     text-decoration: none;
     color: #a2aec1; }
     .navbar__link:not(:last-child) {
       margin-right: 3rem; }
-    @media only screen and (max-width: 600px) {
+    @media only screen and (max-width: 1100px) {
       .navbar__link {
         font-size: 1.5rem; }
         .navbar__link:not(:last-child) {
@@ -396,7 +438,9 @@ body {
   text-align: center;
   z-index: 1; }
   .landing__title {
-    font-size: 6rem;
+    font-size: 8rem;
+    font-weight: 300;
+    font-style: oblique;
     color: #000; }
 
 .movies-cover {
@@ -434,6 +478,7 @@ body {
       margin: 1.5rem 3rem; } }
 
 .movies-show {
+  display: flex;
   margin: 3rem 30rem;
   background-image: linear-gradient(to top left, #323842, #161e2b); }
   @media only screen and (max-width: 1500px) {
@@ -442,6 +487,12 @@ body {
   @media only screen and (max-width: 600px) {
     .movies-show {
       margin: 1.5rem 3rem; } }
+  .movies-show__poster {
+    width: 25rem;
+    height: 100%; }
+    @media only screen and (max-width: 1100px) {
+      .movies-show__poster {
+        display: none; } }
 
 .movies-comment {
   margin: 0 30rem;
