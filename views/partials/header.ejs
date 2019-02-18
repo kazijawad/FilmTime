@@ -1,44 +1,44 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8"/>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="FilmTime is the site for all your movie information.">
-        <title>FilmTime | Movie Database</title>
-        <link href="https://fonts.googleapis.com/css?family=Sunflower:300,500,700" rel="stylesheet">
-        <link rel="shortcut icon" type="image/png" href="/images/videocam.png">
-        <link rel="stylesheet" href="/css/style.css">
-    </head>
-    <body>
-        <nav class="navbar">
-			<div class="navbar__left">
-				<a class="navbar__brand" href="/movies">FilmTime</a>
-				<form class="navbar__search" action="/movies" method="GET">
-					<input class="navbar__input" type="text" name="search" placeholder="Search Movies...">
-					<input class="navbar__submit" type="submit" value="Search">
-				</form>
-			</div>
-			<div>
-				<% if (!currentUser) { %>
-					<a class="navbar__link" href="/register">Register</a>
-					<a class="navbar__link" href="/login">Login</a>
-				<% } else { %>
-					<a class="navbar__link navbar__btn btn btn--white" href="/movies/new">Add a Movie</a>
-					<a class="navbar__link" href="/users/<%= currentUser.id %>">Signed In As <%= currentUser.username %></a>
-					<a class="navbar__link" href="/logout">Logout</a>
-				<% } %>
-			</div>
-		</nav>
-		<header class="header">
-			 <% if (error && error.length > 0) { %>
-                <div class="flash">
-                    <p><%= error %></p>
-                </div>
-            <% } else if (success && success.length > 0) { %>
-                <div class="flash">
-                    <p><%= success %></p>
-                </div>
-            <% } %>
-		</header>
-        <main>
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="FilmTime is the site for all your movie information.">
+	<title>FilmTime | Movie Database</title>
+	<link href="https://fonts.googleapis.com/css?family=Sunflower:300,500,700" rel="stylesheet">
+	<link rel="shortcut icon" type="image/png" href="/images/videocam.png">
+	<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+	<nav class="navbar">
+		<div class="navbar__left">
+			<a class="navbar__brand" href="/movies">FilmTime</a>
+			<form class="navbar__search" action="/movies" method="GET">
+				<input class="navbar__input" type="text" name="search" placeholder="Search Movies...">
+				<input class="navbar__submit" type="submit" value="Search">
+			</form>
+		</div>
+		<div>
+			<% if (!currentUser) { %>
+			<a class="navbar__link" href="/register">Register</a>
+			<a class="navbar__link" href="/login">Login</a>
+			<% } else { %>
+			<a class="navbar__link navbar__btn btn btn--white" href="/movies/new">Add a Movie</a>
+			<a class="navbar__link" href="/users/<%= currentUser.id %>">Signed In As <%= currentUser.username %></a>
+			<a class="navbar__link" href="/logout">Logout</a>
+			<% } %>
+		</div>
+	</nav>
+	<header class="header">
+		<% if (error && error.length > 0) { %>
+		<div class="flash">
+			<p><%= error %></p>
+		</div>
+		<% } else if (success && success.length > 0) { %>
+		<div class="flash">
+			<p><%= success %></p>
+		</div>
+		<% } %>
+	</header>
+	<main>

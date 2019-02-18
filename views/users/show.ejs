@@ -1,16 +1,16 @@
 <% include ../partials/header %>
 
 <div>
-    <div class="profile">
+	<div class="profile">
 		<h3 class="profile__user"><%= user.username %></h3>
 		<h4 class="profile__title">Submitted Movies</h4>
-        <% movies.forEach(movie => { %>
-            <div class="profile__content">
-                <a class="profile__link" href="/movies/<%= movie.id %>"><%= movie.title %></a>
-                <p class="profile__description"><%= movie.description %></p>
-            </div>
-        <% }); %>
-    </div>
+		<% movies.forEach(movie => { %>
+		<div class="profile__content">
+			<a class="profile__link" href="/movies/<%= movie.id %>"><%= movie.title %></a>
+			<p class="profile__description"><%= movie.description %></p>
+		</div>
+		<% }); %>
+	</div>
 </div>
 
 <% include ../partials/footer %>

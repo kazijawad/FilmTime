@@ -1,19 +1,19 @@
 <% include ../partials/header %>
 
 <div class="form">
-    <h1 class="form__title">Password Reset</h1>
-    <div class="form__body">
-        <form action="/reset" method="POST">
-            <div class="form__item">
-                <label class="form__label" for="email">Email</label>
-                <input class="form__input" type="email" name="email" autofocus>
-            </div>
-            <div class="form__item">
-                <button class="btn btn--black">Send Email</button>
-            </div>
-        </form>
-        <a class="btn btn--black" href="/login">Go Back</a>
-    </div>
+	<h1 class="form__title">Password Reset</h1>
+	<div class="form__body">
+		<form action="/reset" method="POST">
+			<div class="form__item">
+				<label class="form__label" for="email">Email</label>
+				<input class="form__input" type="email" name="email" autofocus>
+			</div>
+			<div class="form__item">
+				<button class="btn btn--black">Send Email</button>
+			</div>
+		</form>
+		<a class="btn btn--black" href="/login">Go Back</a>
+	</div>
 </div>
 
 <% include ../partials/footer %>

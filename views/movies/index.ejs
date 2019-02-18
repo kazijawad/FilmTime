@@ -1,28 +1,29 @@
 <% include ../partials/header %>
 
 <section class="movies-cover">
-        <h1 class="movies-cover__text">View our community built database of movies</h1>
+	<h1 class="movies-cover__text">View our community built database of movies</h1>
 </section>
 
 <section class="movies-view">
-    <% if (noMatch !== null) { %>
-        <p class="movies-view__error"><%= noMatch %></p>
-    <% } %>
+	<% if (noMatch !== null) { %>
+	<p class="movies-view__error"><%= noMatch %></p>
+	<% } %>
 
-    <% movies.forEach(movie => { %>
-        <div class="card">
-			<div>
-				<% if (movie.poster !== null) { %>
-					<img class="card__img" src="data:<%= movie.poster.mimeType %>;base64,<%= movie.poster.data.toString('base64') %>" />
-				<% } %>
-			</div>
-			<div>
-				<h3 class="card__title"><%= movie.title %></h3>
-				<p class="card__description"><%= movie.description %></p>
-				<a class="card__link" href="movies/<%= movie._id %>">More Info</a>
-			</div> 
-        </div>
-    <% }); %>
+	<% movies.forEach(movie => { %>
+	<div class="card">
+		<div>
+			<% if (movie.poster !== null) { %>
+			<img class="card__img"
+				src="data:<%= movie.poster.mimeType %>;base64,<%= movie.poster.data.toString('base64') %>" />
+			<% } %>
+		</div>
+		<div>
+			<h3 class="card__title"><%= movie.title %></h3>
+			<p class="card__description"><%= movie.description %></p>
+			<a class="card__link" href="movies/<%= movie._id %>">More Info</a>
+		</div>
+	</div>
+	<% }); %>
 </section>
 
 <% include ../partials/footer %>
