@@ -41,7 +41,7 @@ app.use((req, res, next) => {
 });
 
 // MONGO CONFIG
-mongoose.connect(process.env.MONGODB_URI)
+mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true })
 	.then(() => {
 		console.info('Database is Online');
 	})
