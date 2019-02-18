@@ -1,53 +1,53 @@
 {
-  "name": "filmtime",
-  "version": "1.0.0",
-  "description": "A movie database web app.",
-  "homepage": "https://filmtime.herokuapp.com",
-  "bugs": {
-    "url": "https://github.com/kazijawad/FilmTime/issues"
-  },
-  "author": "Kazi Jawad",
-  "license": "MIT",
-  "main": "app.js",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/kazijawad/FilmTime"
-  },
-  "engines": {
-    "node": "8.x",
-    "npm": "5.x"
-  },
-  "scripts": {
-    "start": "node app.js",
-    "lint": "eslint . --fix",
-    "nodemon": "nodemon app.js",
-    "watch:sass": "node-sass public/sass/main.scss public/css/style.css -w",
-    "test": "npm-run-all --parallel nodemon watch:sass",
-    "compile:sass": "node-sass public/sass/main.scss public/css/style.comp.css",
-    "compress:css": "node-sass public/css/style.comp.css public/css/style.css --output-style compressed",
-    "build:css": "npm-run-all compile:sass compress:css"
-  },
-  "dependencies": {
-    "async": "^2.6.2",
-    "body-parser": "^1.18.3",
-    "connect-flash": "^0.1.1",
-    "cookie-parser": "^1.4.4",
-    "dotenv": "^6.0.0",
-    "ejs": "^2.6.1",
-    "express": "^4.16.4",
-    "express-session": "^1.15.6",
-    "method-override": "^2.3.10",
-    "moment": "^2.22.2",
-    "mongoose": "^5.4.13",
-    "multer": "^1.3.1",
-    "nodemailer": "^4.6.7",
-    "passport": "^0.4.0",
-    "passport-local": "^1.0.0",
-    "passport-local-mongoose": "^5.0.1"
-  },
-  "devDependencies": {
-    "node-sass": "^4.11.0",
-    "nodemon": "^1.18.10",
-    "npm-run-all": "^4.1.5"
-  }
+	"name": "filmtime",
+	"version": "1.0.0",
+	"description": "A movie database web app.",
+	"homepage": "https://filmtime.herokuapp.com",
+	"bugs": {
+		"url": "https://github.com/kazijawad/FilmTime/issues"
+	},
+	"author": "Kazi Jawad",
+	"license": "MIT",
+	"main": "app.js",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/kazijawad/FilmTime"
+	},
+	"engines": {
+		"node": "10.x",
+		"npm": "6.x"
+	},
+	"scripts": {
+		"start": "node app.js",
+		"lint": "eslint . --fix",
+		"nodemon": "nodemon app.js",
+		"watch:sass": "node-sass public/sass/main.scss public/css/style.css -w",
+		"test": "npm-run-all --parallel nodemon watch:sass",
+		"compile:sass": "node-sass public/sass/main.scss public/css/style.comp.css",
+		"compress:css": "node-sass public/css/style.comp.css public/css/style.css --output-style compressed",
+		"build:css": "npm-run-all compile:sass compress:css"
+	},
+	"dependencies": {
+		"async": "^2.6.2",
+		"body-parser": "^1.18.3",
+		"connect-flash": "^0.1.1",
+		"cookie-parser": "^1.4.4",
+		"dotenv": "^6.0.0",
+		"ejs": "^2.6.1",
+		"express": "^4.16.4",
+		"express-session": "^1.15.6",
+		"method-override": "^2.3.10",
+		"moment": "^2.22.2",
+		"mongoose": "^5.4.13",
+		"multer": "^1.3.1",
+		"nodemailer": "^4.6.7",
+		"passport": "^0.4.0",
+		"passport-local": "^1.0.0",
+		"passport-local-mongoose": "^5.0.1"
+	},
+	"devDependencies": {
+		"node-sass": "^4.11.0",
+		"nodemon": "^1.18.10",
+		"npm-run-all": "^4.1.5"
+	}
 }
