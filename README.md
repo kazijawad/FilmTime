@@ -11,9 +11,9 @@ These instructions will get you a copy of the project up and running on your loc
 What things you need to install the software and how to install them
 
 ```
-node 8.x
-npm 5.x
-mongodb 3.x
+node 8.x.x
+npm 5.x.x
+mongodb 3.x.x
 ```
 
 ### Installing
@@ -66,7 +66,7 @@ Deployed with [Heroku](https://www.heroku.com)
 * [Mongoose](http://www.mongoosejs.com) - MongoDB Framework
 * [SASS](https://sass-lang.com) - CSS Preprocessor
 
-## Authors
+## Author
 
 Kazi Jawad
 
