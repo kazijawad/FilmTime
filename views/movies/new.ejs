@@ -1,28 +1,30 @@
 <% include ../partials/header %>
 
-<div class="form">
-	<h1 class="form__title">Add A New Movie</h1>
-	<div class="form__body">
-		<form action="/movies" method="POST" enctype="multipart/form-data">
-			<div class="form__item">
-				<label class="form__label" for="title">Title</label>
-				<input class="form__input" type="text" name="title" id="title" placeholder="Title" required />
-			</div>
-			<div class="form__item">
-				<label class="form__label" for="description">Description</label>
-				<textarea class="form__input" rows="8" cols="30" type="text" name="description" id="description"
-					placeholder="Description" required></textarea>
-			</div>
-			<div class="form__item">
-				<label class="form__label" for="poster">Poster</label>
-				<input class="form__input" type="file" name="poster" id="poster" />
-			</div>
-			<div class="form__item">
-				<button class="btn btn--black">Submit</button>
-			</div>
-		</form>
-		<a class="btn btn--black" href="/movies">Go Back</a>
+<main>
+	<div class="form">
+		<h1 class="form__title">Add A New Movie</h1>
+		<div class="form__body">
+			<form action="/movies" method="POST" enctype="multipart/form-data">
+				<div class="form__item">
+					<label class="form__label" for="title">Title</label>
+					<input class="form__input" type="text" name="title" id="title" placeholder="Title" required />
+				</div>
+				<div class="form__item">
+					<label class="form__label" for="description">Description</label>
+					<textarea class="form__input" rows="8" cols="30" type="text" name="description" id="description"
+						placeholder="Description" required></textarea>
+				</div>
+				<div class="form__item">
+					<label class="form__label" for="poster">Poster</label>
+					<input class="form__input" type="file" name="poster" id="poster" />
+				</div>
+				<div class="form__item">
+					<button class="btn btn--black">Submit</button>
+				</div>
+			</form>
+			<a class="btn btn--black" href="/movies">Go Back</a>
+		</div>
 	</div>
-</div>
+</main>
 
 <% include ../partials/footer %>
