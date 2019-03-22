@@ -18,14 +18,8 @@ body {
 main {
   flex: 1; }
 
-.u-text-decoration {
-  text-decoration: none; }
-
 .u-inline-block {
   display: inline-block; }
-
-.u-color-grey-light {
-  color: #a2aec1; }
 
 .banner {
   padding: 4rem 30rem;
@@ -178,45 +172,6 @@ main {
         .comment__btn:not(:last-child) {
           margin-right: 0; } }
 
-.content {
-  padding: 3rem;
-  color: #fff; }
-  @media only screen and (max-width: 600px) {
-    .content {
-      padding: 3rem 2rem;
-      text-align: center; } }
-  .content__title {
-    font-size: 3rem;
-    padding: 1rem; }
-    @media only screen and (max-width: 600px) {
-      .content__title {
-        font-size: 2.5rem;
-        padding: 0; } }
-  .content__body {
-    font-size: 2rem;
-    padding: 0 4rem 0 1rem; }
-    @media only screen and (max-width: 600px) {
-      .content__body {
-        margin: 2rem 0 0 0;
-        padding: 0 2rem; } }
-  .content__author {
-    padding-top: 2rem; }
-  .content__link {
-    display: inline-block; }
-    .content__link:not(:last-child) {
-      padding-right: 1rem; }
-
-.flash {
-  display: inline-block;
-  margin: 2rem 0;
-  padding: 2rem;
-  font-size: 3rem;
-  text-align: center;
-  border-radius: 2rem;
-  box-shadow: 0 0.5rem 3rem 0.5rem rgba(0, 0, 0, 0.5);
-  background-image: linear-gradient(to right, #323842, #161e2b);
-  color: #e74c3c; }
-
 .form {
   margin: 6rem 0;
   text-align: center;
@@ -259,6 +214,53 @@ main {
     .gallery {
       padding: 1.5rem 3rem; } }
 
+.item {
+  display: flex;
+  margin: 3rem 30rem;
+  background-image: linear-gradient(to top left, #323842, #161e2b); }
+  @media only screen and (max-width: 1500px) {
+    .item {
+      margin: 2rem 8rem; } }
+  @media only screen and (max-width: 600px) {
+    .item {
+      margin: 1.5rem 3rem; } }
+  .item__poster {
+    width: 25rem;
+    height: 100%; }
+    @media only screen and (max-width: 1100px) {
+      .item__poster {
+        display: none; } }
+  .item__content {
+    padding: 3rem;
+    color: #fff; }
+    @media only screen and (max-width: 600px) {
+      .item__content {
+        padding: 3rem 2rem;
+        text-align: center; } }
+  .item__title {
+    font-size: 3rem;
+    padding: 1rem; }
+    @media only screen and (max-width: 600px) {
+      .item__title {
+        font-size: 2.5rem;
+        padding: 0; } }
+  .item__body {
+    font-size: 2rem;
+    padding: 0 4rem 0 1rem; }
+    @media only screen and (max-width: 600px) {
+      .item__body {
+        margin: 2rem 0 0 0;
+        padding: 0 2rem; } }
+  .item__author {
+    padding-top: 2rem; }
+  .item__username {
+    text-decoration: none;
+    color: #a2aec1; }
+  .item__link {
+    display: inline-block; }
+    .item__link:not(:last-child) {
+      padding-right: 1rem; }
+
 .profile {
   margin: 6rem 30rem;
   padding: 3rem;
@@ -290,55 +292,6 @@ main {
   @media only screen and (max-width: 600px) {
     .profile {
       margin: 1.5rem 3rem; } }
-
-.slideshow {
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  z-index: 0; }
-  .slideshow li {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-position: 50% 50%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    opacity: 0;
-    z-index: 0;
-    animation: imageAnimation 50s linear infinite; }
-    .slideshow li:nth-child(1) {
-      background-image: linear-gradient(to bottom, transparent 0%, #fff 100%), url(https://images4.alphacoders.com/909/909185.jpg); }
-    .slideshow li:nth-child(2) {
-      background-image: linear-gradient(to bottom, transparent 0%, #fff 100%), url(https://images8.alphacoders.com/560/560736.jpg);
-      animation-delay: 10s; }
-    .slideshow li:nth-child(3) {
-      background-image: linear-gradient(to bottom, transparent 0%, #fff 100%), url(https://images.alphacoders.com/548/548874.jpg);
-      animation-delay: 20s; }
-    .slideshow li:nth-child(4) {
-      background-image: linear-gradient(to bottom, transparent 0%, #fff 100%), url(https://images8.alphacoders.com/911/911204.jpg);
-      animation-delay: 30s; }
-    .slideshow li:nth-child(5) {
-      background-image: linear-gradient(to bottom, transparent 0%, #fff 100%), url(https://images6.alphacoders.com/650/650608.jpg);
-      animation-delay: 40s; }
-
-@keyframes imageAnimation {
-  0% {
-    opacity: 0;
-    animation-timing-function: ease-in; }
-  10% {
-    opacity: 1;
-    animation-timing-function: ease-out; }
-  20% {
-    opacity: 1; }
-  30% {
-    opacity: 0; } }
 
 .footer {
   display: flex;
@@ -505,23 +458,6 @@ main {
 
 .index {
   background-image: linear-gradient(to bottom right, #323842, #161e2b); }
-
-.movies-show {
-  display: flex;
-  margin: 3rem 30rem;
-  background-image: linear-gradient(to top left, #323842, #161e2b); }
-  @media only screen and (max-width: 1500px) {
-    .movies-show {
-      margin: 2rem 8rem; } }
-  @media only screen and (max-width: 600px) {
-    .movies-show {
-      margin: 1.5rem 3rem; } }
-  .movies-show__poster {
-    width: 25rem;
-    height: 100%; }
-    @media only screen and (max-width: 1100px) {
-      .movies-show__poster {
-        display: none; } }
 
 .movies-comment {
   margin: 0 30rem;

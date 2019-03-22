@@ -1,0 +1,69 @@
+.item {
+	display: flex;
+    margin: 3rem 30rem;
+    background-image: linear-gradient(to top left, $color-grey-dark, $color-blue-dark);
+
+    @include response(laptop) {
+        margin: 2rem 8rem;
+	}
+
+    @include response(phone) {
+        margin: 1.5rem 3rem;
+	}
+
+	&__poster {
+		width: 25rem;
+		height: 100%;
+
+		@include response(tablet) {
+			display: none;
+		}
+	}
+
+	&__content {
+		padding: 3rem;
+		color: $color-white;
+		
+		@include response(phone) {
+			padding: 3rem 2rem;
+			text-align: center;
+		}
+	}
+
+	&__title {
+        font-size: 3rem;
+		padding: 1rem;
+
+		@include response(phone) {
+			font-size: 2.5rem;
+			padding: 0;
+		}
+    }
+
+    &__body {
+        font-size: 2rem;
+        padding: 0 4rem 0 1rem; 
+		
+		@include response(phone) {
+			margin: 2rem 0 0 0;
+			padding: 0 2rem;
+		}
+    }
+
+    &__author {
+        padding-top: 2rem;
+	}
+
+	&__username {
+		text-decoration: none;
+		color: $color-grey-light;
+	}
+
+	&__link {
+        display: inline-block;
+
+        &:not(:last-child) {
+            padding-right: 1rem;
+        }
+    }
+}
