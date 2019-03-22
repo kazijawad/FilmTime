@@ -1,24 +1,28 @@
 <% include ../partials/header %>
 
-<div class="form">
-	<h1 class="form__title">Login</h1>
-	<div class="form__body">
-		<form action="/login" method="post">
-			<div class="form__item">
-				<input class="form__input" type="text" name="username" placeholder="Username" required>
+<main>
+	<div class="form">
+		<h1 class="form__title">Login</h1>
+		<div class="form__body">
+			<form action="/login" method="post">
+				<div class="form__item">
+					<label class="form__label" for="username">Username</label>
+					<input class="form__input" type="text" name="username" placeholder="Username" required>
+				</div>
+				<div class="form__item">
+					<label class="form__label" for="password">Password</label>
+					<input class="form__input" type="password" name="password" placeholder="Password" required>
+				</div>
+				<div class="form__item">
+					<button class="btn btn--black">Login</button>
+				</div>
+			</form>
+			<div>
+				<a class="btn btn--black" href="/reset">Reset Password</a>
 			</div>
-			<div class="form__item">
-				<input class="form__input" type="password" name="password" placeholder="Password" required>
-			</div>
-			<div class="form__item">
-				<button class="btn btn--black">Login</button>
-			</div>
-		</form>
-		<div>
-			<a class="btn btn--black" href="/reset">Reset Password</a>
+			<a class="btn btn--black" href="/movies">Go Back</a>
 		</div>
-		<a class="btn btn--black" href="/movies">Go Back</a>
 	</div>
-</div>
+</main>
 
 <% include ../partials/footer %>

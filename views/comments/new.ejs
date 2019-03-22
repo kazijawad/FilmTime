@@ -1,18 +1,21 @@
 <% include ../partials/header %>
 
-<div class="form">
-	<h1 class="form__title">Add New Comment to <%= movie.title %></h1>
-	<div class="form__body">
-		<form action="/movies/<%= movie._id %>/comments" method="POST">
-			<div class="form__item">
-				<input class="form__input" type="text" name="comment[text]" placeholder="Comment">
-			</div>
-			<div class="form__item">
-				<button class="btn btn--black">Submit!</button>
-			</div>
-		</form>
-		<a class="btn btn--black" href="/movies">Go Back</a>
+<main>
+	<div class="form">
+		<h1 class="form__title">Add New Comment to <%= movie.title %></h1>
+		<div class="form__body">
+			<form action="/movies/<%= movie._id %>/comments" method="POST">
+				<div class="form__item">
+					<label class="form__label" for="comment[text]">Comment</label>
+					<input class="form__input" type="text" name="comment[text]" placeholder="Comment">
+				</div>
+				<div class="form__item">
+					<button class="btn btn--black">Submit!</button>
+				</div>
+			</form>
+			<a class="btn btn--black" href="/movies">Go Back</a>
+		</div>
 	</div>
-</div>
+</main>
 
 <% include ../partials/footer %>

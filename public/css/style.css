@@ -202,11 +202,6 @@ main {
   .form__input {
     padding: 1rem;
     border: 0.2rem solid #38475e; }
-  .form__search {
-    font-size: 1.5rem;
-    margin-top: 3rem;
-    padding: 1rem;
-    border: 0.2rem solid #38475e; }
 
 .gallery {
   display: flex;
