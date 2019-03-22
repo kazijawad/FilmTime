@@ -36,9 +36,14 @@ npm install
 touch .env
 ```
 
-4. Include a PORT environment variable with your preferred value
+4. Include these environment variables with your preferred value
 ```
-PORT = 3000
+ADMIN_CODE=XXX
+GMAIL=XXX
+GMAIL_PW=XXX
+MONGODB_URI=XXX
+PORT=3000
+SECRET=XXX
 ```
 
 5. Run the npm script: npm start
@@ -48,7 +53,8 @@ npm start
 
 6. The program will start properly with this message
 ```
-Server is Online: 3000
+Server is Online: Port 3000
+Database is Online
 ```
 
 7. To view the website locally on a web browser
