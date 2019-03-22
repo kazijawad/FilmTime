@@ -10,21 +10,13 @@ body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
-  box-sizing: border-box; }
-
-main {
-  flex: 1; }
-
-body {
+  box-sizing: border-box;
   font-family: 'Sunflower', sans-serif;
   font-weight: 400;
   color: #fff; }
 
-.heading-primary {
-  font-size: 5rem; }
-  @media only screen and (max-width: 600px) {
-    .heading-primary {
-      font-size: 4rem; } }
+main {
+  flex: 1; }
 
 .u-text-decoration {
   text-decoration: none; }
