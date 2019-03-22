@@ -71,7 +71,7 @@ router.post('/register', function(req, res) {
 		}
 
 		passport.authenticate('local')(req, res, function() {
-			req.flash('success', `Signup was successful! Welcome ${req.body.username}!`);
+			req.flash('success', 'Welcome to FilmTime!');
 			res.redirect('/');
 		});
 	});

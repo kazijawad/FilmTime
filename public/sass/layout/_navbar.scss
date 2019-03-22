@@ -27,6 +27,11 @@
 		font-size: 4rem;
 		text-decoration: none;
 		color: $color-grey-light;
+		transition: all .5s;
+
+		&:hover {
+			color: $color-white;
+		}
 
 		@include response(tablet) {
 			font-size: 2.5rem;
@@ -70,16 +75,16 @@
 		border-radius: 2rem;
 		background: $color-grey-light;
 		color: $color-blue-light;
-		transition: all .2s;
+		transition: all .5s;
 		cursor: pointer;
+
+		&:hover {
+			background-color: $color-white;
+		}
 
 		@include response(tablet) {
 			padding: .5rem .7rem;
 			font-size: 1.3rem;
-		}
-
-		&:hover {
-			background-color: $color-white;
 		}
 	}
 
@@ -87,9 +92,14 @@
 		font-size: 2rem;
 		text-decoration: none;
 		color: $color-grey-light;
+		transition: all .5s;
 
 		&:not(:last-child) {
 			margin-right: 3rem;
+		}
+
+		&:hover {
+			color: $color-white;
 		}
 
 		@include response(tablet) {
@@ -109,10 +119,4 @@
 			display: none !important;
 		}
 	}
-}
-
-.header {
-	display: flex;
-  	justify-content: center;
-  	align-items: center;
 }

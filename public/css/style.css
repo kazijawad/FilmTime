@@ -262,10 +262,10 @@ body {
     color: #161e2b; }
   @media only screen and (max-width: 1500px) {
     .gallery {
-      padding: 0 10rem 10rem; } }
+      padding: 5rem 10rem; } }
   @media only screen and (max-width: 600px) {
     .gallery {
-      padding: 1.5rem 3rem 10rem; } }
+      padding: 1.5rem 3rem; } }
 
 .profile {
   margin: 6rem 30rem;
@@ -386,6 +386,13 @@ body {
       .footer__contact {
         font-size: 1rem; } }
 
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+  background-color: #161e2b; }
+
 .navbar {
   display: flex;
   flex-flow: row nowrap;
@@ -408,7 +415,10 @@ body {
   .navbar__brand {
     font-size: 4rem;
     text-decoration: none;
-    color: #a2aec1; }
+    color: #a2aec1;
+    transition: all .5s; }
+    .navbar__brand:hover {
+      color: #fff; }
     @media only screen and (max-width: 1100px) {
       .navbar__brand {
         font-size: 2.5rem; } }
@@ -442,20 +452,23 @@ body {
     border-radius: 2rem;
     background: #a2aec1;
     color: #38475e;
-    transition: all .2s;
+    transition: all .5s;
     cursor: pointer; }
+    .navbar__submit:hover {
+      background-color: #fff; }
     @media only screen and (max-width: 1100px) {
       .navbar__submit {
         padding: .5rem .7rem;
         font-size: 1.3rem; } }
-    .navbar__submit:hover {
-      background-color: #fff; }
   .navbar__link {
     font-size: 2rem;
     text-decoration: none;
-    color: #a2aec1; }
+    color: #a2aec1;
+    transition: all .5s; }
     .navbar__link:not(:last-child) {
       margin-right: 3rem; }
+    .navbar__link:hover {
+      color: #fff; }
     @media only screen and (max-width: 1100px) {
       .navbar__link {
         font-size: 1.5rem; }
@@ -467,11 +480,6 @@ body {
     @media only screen and (max-width: 1100px) {
       .navbar__btn {
         display: none !important; } }
-
-.header {
-  display: flex;
-  justify-content: center;
-  align-items: center; }
 
 .error {
   position: fixed;
