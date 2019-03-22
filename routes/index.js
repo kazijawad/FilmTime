@@ -8,10 +8,6 @@ const Movie = require('../models/movie');
 const router = express.Router();
 
 // HELPER FUNCTIONS
-function escapeRegex(text) {
-	return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&');
-}
-
 function compareMovies(a, b) {
 	if (a.title < b.title) {
 		return -1;
@@ -23,27 +19,7 @@ function compareMovies(a, b) {
 
 // INDEX
 router.get('/', function(req, res) {
-	let noMatch = null;
-
-	if (req.query.search) {
-		const regex = new RegExp(escapeRegex(req.query.search), 'gi');
-
-		Movie.find({ title: regex }, function(error, allMovies) {
-			if (error) { return console.error(error); }
-			if (allMovies.length < 1) {
-				noMatch = 'No movies match that search, please try again.';
-			}
-			allMovies.sort(compareMovies);
-
-			res.render('movies/index', { movies: allMovies, noMatch: noMatch, page: 'movies' });
-		});
-	} else {
-		Movie.find({}, function(error, allMovies) {
-			if (error) { return console.error(error); }
-			allMovies.sort(compareMovies);
-			res.render('movies/index', { movies: allMovies, noMatch: noMatch, page: 'movies' });
-		});
-	}
+	res.redirect('/movies');
 });
 
 // REGISTER
