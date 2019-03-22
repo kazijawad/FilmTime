@@ -7,19 +7,52 @@ const User = require('../models/user');
 const Movie = require('../models/movie');
 const router = express.Router();
 
-router.get('/', (req, res) => {
-	res.render('landing');
+// HELPER FUNCTIONS
+function escapeRegex(text) {
+	return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&');
+}
+
+function compareMovies(a, b) {
+	if (a.title < b.title) {
+		return -1;
+	} else if (a.title > b.title) {
+		return 1;
+	}
+	return 0;
+}
+
+// INDEX
+router.get('/', function(req, res) {
+	let noMatch = null;
+
+	if (req.query.search) {
+		const regex = new RegExp(escapeRegex(req.query.search), 'gi');
+
+		Movie.find({ title: regex }, function(error, allMovies) {
+			if (error) { return console.error(error); }
+			if (allMovies.length < 1) {
+				noMatch = 'No movies match that search, please try again.';
+			}
+			allMovies.sort(compareMovies);
+
+			res.render('movies/index', { movies: allMovies, noMatch: noMatch, page: 'movies' });
+		});
+	} else {
+		Movie.find({}, function(error, allMovies) {
+			if (error) { return console.error(error); }
+			allMovies.sort(compareMovies);
+			res.render('movies/index', { movies: allMovies, noMatch: noMatch, page: 'movies' });
+		});
+	}
 });
 
 // REGISTER
-router.get('/register', (req, res) => {
-	if (req.user) {
-		return res.redirect('/movies');
-	}
+router.get('/register', function(req, res) {
+	if (req.user) { return res.redirect('/'); }
 	res.render('auth/register', { page: 'register' });
 });
 
-router.post('/register', (req, res) => {
+router.post('/register', function(req, res) {
 	const newUser = new User({
 		username: req.body.username,
 		firstName: req.body.firstName,
@@ -31,56 +64,54 @@ router.post('/register', (req, res) => {
 		newUser.isAdmin = true;
 	}
 
-	User.register(newUser, req.body.password, (error) => {
+	User.register(newUser, req.body.password, function(error) {
 		if (error) {
 			console.error(error);
 			return res.render('auth/register', { error: error.message });
 		}
 
-		passport.authenticate('local')(req, res, () => {
+		passport.authenticate('local')(req, res, function() {
 			req.flash('success', `Signup was successful! Welcome ${req.body.username}!`);
-			res.redirect('/movies');
+			res.redirect('/');
 		});
 	});
 });
 
 // LOGIN
-router.get('/login', (req, res) => {
-	if (req.user) {
-		return res.redirect('/movies');
-	}
+router.get('/login', function(req, res) {
+	if (req.user) { return res.redirect('/'); }
 	res.render('auth/login', { page: 'login' });
 });
 
 router.post('/login', passport.authenticate('local',
 	{
-		successRedirect: '/movies',
+		successRedirect: '/',
 		failureRedirect: '/login',
 		failureFlash: true,
 	}
 ));
 
 // LOGOUT
-router.get('/logout', (req, res) => {
+router.get('/logout', function(req, res) {
 	req.logout();
-	res.redirect('/movies');
+	res.redirect('/');
 });
 
 // PASSWORD RESET
-router.get('/reset', (req, res) => {
+router.get('/reset', function(req, res) {
 	res.render('auth/reset');
 });
 
-router.post('/reset', (req, res, next) => {
+router.post('/reset', function(req, res, next) {
 	async.waterfall([
 		function(done) {
-			crypto.randomBytes(20, (error, buf) => {
+			crypto.randomBytes(20, function(error, buf) {
 				const token = buf.toString('hex');
 				done(error, token);
 			});
 		},
 		function(token, done) {
-			User.findOne({ email: req.body.email }, (error, user) => {
+			User.findOne({ email: req.body.email }, function(error, user) {
 				if (!user) {
 					req.flash('error', 'No account with that email address exists.');
 					return res.redirect('/reset');
@@ -89,8 +120,8 @@ router.post('/reset', (req, res, next) => {
 				user.resetPasswordToken = token;
 				user.resetPasswordExpires = Date.now() + 3600000;
 
-				user.save(err => {
-					done(err, token, user);
+				user.save(function(error) {
+					done(error, token, user);
 				});
 			});
 		},
@@ -102,6 +133,7 @@ router.post('/reset', (req, res, next) => {
 					pass: process.env.GMAIL_PW,
 				},
 			});
+
 			const mailOptions = {
 				to: user.email,
 				from: process.env.GMAIL,
@@ -111,7 +143,8 @@ router.post('/reset', (req, res, next) => {
 					`http://${req.headers.host}/reset/${token}\n\n` +
 					'If you did not request this, please ignore this email and your password will remain unchanged.\n',
 			};
-			smtpTransport.sendMail(mailOptions, error => {
+
+			smtpTransport.sendMail(mailOptions, function(error) {
 				req.flash('success', `An email has been sent to ${user.email} with further instructions.`);
 				done(error, 'done');
 			});
@@ -123,8 +156,8 @@ router.post('/reset', (req, res, next) => {
 });
 
 // PASSWORD TOKEN
-router.get('/reset/:token', (req, res) => {
-	User.findOne({ resetPasswordToken: req.params.token, resetPasswordExpires: { $gt: Date.now() } }, (error, user) => {
+router.get('/reset/:token', function(req, res) {
+	User.findOne({ resetPasswordToken: req.params.token, resetPasswordExpires: { $gt: Date.now() } }, function(error, user) {
 		if (!user) {
 			req.flash('error', 'Password token is invalid or has expired.');
 			return res.redirect('/reset');
@@ -133,21 +166,18 @@ router.get('/reset/:token', (req, res) => {
 	});
 });
 
-router.post('/reset/:token', (req, res) => {
+router.post('/reset/:token', function(req, res) {
 	async.waterfall([
 		function(done) {
-			User.findOne({ resetPasswordToken: req.params.token, resetPasswordExpires: { $gt: Date.now() } }, (error, user) => {
+			User.findOne({ resetPasswordToken: req.params.token, resetPasswordExpires: { $gt: Date.now() } }, function(error, user) {
 				if (!user) {
 					req.flash('error', 'Password reset token is invalid or has expired.');
 					return res.redirect('back');
 				} else if (req.body.password === req.body.confirm) {
-					user.setPassword(req.body.password, () => {
+					user.setPassword(req.body.password, function() {
 						user.resetPasswordToken = undefined;
 						user.resetPasswordExpires = undefined;
-
-						user.save(function(err) {
-							done(err, user);
-						});
+						user.save(function(error) { done(error, user); });
 					});
 				} else {
 					req.flash('error', 'Password does not match.');
@@ -166,44 +196,35 @@ router.post('/reset/:token', (req, res) => {
 			const mailOptions = {
 				to: user.email,
 				from: process.env.GMAIL,
-				subject: 'Your FilmTime password has been changed',
+				subject: 'Your FilmTime password has been changed.',
 				text: `Hello,\n\nThis is a confirmation that the password for your account, ${user.email}, has just been changed.\n`,
 			};
-			smtpTransport.sendMail(mailOptions, (error) => {
-				req.flash('success', 'Success! Your password has been changed.');
+			smtpTransport.sendMail(mailOptions, function(error) {
+				req.flash('success', 'Your password has been changed.');
 				done(error);
 			});
 		},
 	], function() {
-		res.redirect('/movies');
+		res.redirect('/');
 	});
 });
 
 // USER PROFILE
-router.get('/users/:id', (req, res) => {
-	User.findById(req.params.id, (error, foundUser) => {
+router.get('/users/:id', function(req, res) {
+	User.findById(req.params.id, function(error, foundUser) {
 		if (error) {
-			req.flash('error', 'Failed to find that user!');
+			req.flash('error', 'Failed to find User.');
 			return res.redirect('/');
 		}
-		Movie.find().where('author.id').equals(foundUser._id).exec((err, movies) => {
-			if (err) {
-				req.flash('error', 'Failed to find the movies associated with that user!');
+		Movie.find().where('author.id').equals(foundUser._id).exec(function(error, movies) {
+			if (error) {
+				req.flash('error', 'Failed to locate movies associated with User.');
 				return res.redirect('/');
 			}
-			movies.sort(movieCompare);
+			movies.sort(compareMovies);
 			res.render('users/show', { user: foundUser, movies: movies });
 		});
 	});
 });
-
-const movieCompare = (a, b) => {
-	if (a.title < b.title) {
-		return -1;
-	} else if (a.title > b.title) {
-		return 1;
-	}
-	return 0;
-};
 
 module.exports = router;
