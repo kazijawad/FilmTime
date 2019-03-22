@@ -4,7 +4,7 @@
     margin: 1rem 0;
     width: 50rem;
     background-image: linear-gradient(to top, $color-grey-dark, $color-blue-dark);
-	box-shadow: 0 2rem 10rem 0 rgba($color-black, 0.4);
+	box-shadow: 0 2rem 5rem 0 rgba($color-black, 0.4);
 	
 	@include response(phone) {
 		flex-direction: column;
