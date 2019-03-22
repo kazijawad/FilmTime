@@ -349,6 +349,7 @@ body {
   flex-flow: column;
   justify-content: center;
   padding: 5rem 30rem;
+  box-shadow: 0 1rem 5rem 1rem rgba(0, 0, 0, 0.4);
   background-color: #161e2b; }
   @media only screen and (max-width: 1500px) {
     .footer {
@@ -366,14 +367,20 @@ body {
   .footer__brand {
     font-size: 6rem;
     text-decoration: none;
-    color: #a2aec1; }
+    color: #a2aec1;
+    transition: all .5s; }
+    .footer__brand:hover {
+      color: #fff; }
     @media only screen and (max-width: 600px) {
       .footer__brand {
         font-size: 3rem; } }
   .footer__about {
     font-size: 2rem;
     text-decoration: none;
-    color: #a2aec1; }
+    color: #a2aec1;
+    transition: all .5s; }
+    .footer__about:hover {
+      color: #fff; }
     @media only screen and (max-width: 600px) {
       .footer__about {
         font-size: 1rem; } }
@@ -381,7 +388,10 @@ body {
     font-size: 2rem;
     text-align: right;
     text-decoration: none;
-    color: #a2aec1; }
+    color: #a2aec1;
+    transition: all .5s; }
+    .footer__contact:hover {
+      color: #fff; }
     @media only screen and (max-width: 600px) {
       .footer__contact {
         font-size: 1rem; } }
