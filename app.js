@@ -33,7 +33,7 @@ app.use(session({
 app.use(flash());
 app.use(passport.initialize());
 app.use(passport.session());
-app.use((req, res, next) => {
+app.use(function(req, res, next) {
 	res.locals.currentUser = req.user;
 	res.locals.success = req.flash('success');
 	res.locals.error = req.flash('error');
@@ -42,10 +42,10 @@ app.use((req, res, next) => {
 
 // MONGO CONFIG
 mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true })
-	.then(() => {
+	.then(function() {
 		console.info('Database is Online');
 	})
-	.catch(error => {
+	.catch(function(error) {
 		console.error(`DATABASE ERROR: ${error}`);
 	});
 
@@ -54,10 +54,10 @@ app.use('/', indexRoutes);
 app.use('/movies', movieRoutes);
 app.use('/movies/:id/comments', commentRoutes);
 
-app.use((req, res) => {
+app.use(function(req, res) {
 	res.status(404).render('error');
 });
 
-app.listen(process.env.PORT, process.env.IP, () => {
-	console.info(`Server is Online: ${process.env.PORT}`);
+app.listen(process.env.PORT, process.env.IP, function() {
+	console.info(`Server is Online: Port ${process.env.PORT}`);
 });
