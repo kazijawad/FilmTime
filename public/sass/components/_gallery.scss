@@ -1,0 +1,21 @@
+.gallery {
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+	padding: 5rem 30rem;
+
+    &__error {
+        padding-top: 10rem;
+        font-size: 4rem;
+        text-align: center;
+        color: $color-blue-dark;
+    }
+
+    @include response(laptop) {
+        padding: 5rem 10rem;
+    }
+
+    @include response(phone) {
+        padding: 1.5rem 3rem;
+    }
+}

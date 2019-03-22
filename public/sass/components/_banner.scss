@@ -1,0 +1,21 @@
+.banner {
+	padding: 4rem 30rem;
+	box-shadow: 0 1rem 5rem 1rem rgba($color-black, 0.4);
+	text-align: center;
+
+    @include response(laptop) {
+        padding: 4rem 10rem;
+    }
+
+    @include response(phone) {
+		padding: 2rem 3rem;
+	}
+
+	&__brand {
+		font-size: 4rem;
+
+		@include response(phone) {
+			font-size: 2rem;
+		}
+	}
+}

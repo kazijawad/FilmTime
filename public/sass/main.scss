@@ -5,12 +5,14 @@
 @import "base/typography";
 @import "base/utilities";
 
+@import "components/banner";
 @import "components/button";
 @import "components/card";
 @import "components/comment";
 @import "components/content";
 @import "components/flash";
 @import "components/form";
+@import "components/gallery";
 @import "components/profile";
 @import "components/slideshow";
 
@@ -18,4 +20,5 @@
 @import "layout/navbar";
 
 @import "pages/error";
+@import "pages/index";
 @import "pages/movies";

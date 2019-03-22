@@ -35,6 +35,22 @@ body {
 .u-color-grey-light {
   color: #a2aec1; }
 
+.banner {
+  padding: 4rem 30rem;
+  box-shadow: 0 1rem 5rem 1rem rgba(0, 0, 0, 0.4);
+  text-align: center; }
+  @media only screen and (max-width: 1500px) {
+    .banner {
+      padding: 4rem 10rem; } }
+  @media only screen and (max-width: 600px) {
+    .banner {
+      padding: 2rem 3rem; } }
+  .banner__brand {
+    font-size: 4rem; }
+    @media only screen and (max-width: 600px) {
+      .banner__brand {
+        font-size: 2rem; } }
+
 .btn, .btn:link, .btn:visited {
   display: inline-block;
   position: relative;
@@ -233,6 +249,23 @@ body {
     margin-top: 3rem;
     padding: 1rem;
     border: 0.2rem solid #38475e; }
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 5rem 30rem; }
+  .gallery__error {
+    padding-top: 10rem;
+    font-size: 4rem;
+    text-align: center;
+    color: #161e2b; }
+  @media only screen and (max-width: 1500px) {
+    .gallery {
+      padding: 0 10rem 10rem; } }
+  @media only screen and (max-width: 600px) {
+    .gallery {
+      padding: 1.5rem 3rem 10rem; } }
 
 .profile {
   margin: 6rem 30rem;
@@ -456,54 +489,8 @@ body {
   .error__text {
     font-size: 3rem; }
 
-.landing {
-  position: absolute;
-  top: 45%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  z-index: 1; }
-  .landing__title {
-    font-size: 8rem;
-    font-weight: 300;
-    font-style: oblique;
-    color: #000; }
-
-.movies-index {
+.index {
   background-image: linear-gradient(to bottom right, #323842, #161e2b); }
-
-.movies-cover {
-  padding: 4rem 30rem;
-  box-shadow: 0 1rem 5rem 1rem rgba(0, 0, 0, 0.4);
-  text-align: center; }
-  @media only screen and (max-width: 1500px) {
-    .movies-cover {
-      padding: 4rem 10rem; } }
-  @media only screen and (max-width: 600px) {
-    .movies-cover {
-      padding: 2rem 3rem; } }
-  .movies-cover__text {
-    font-size: 4rem; }
-    @media only screen and (max-width: 600px) {
-      .movies-cover__text {
-        font-size: 2rem; } }
-
-.movies-view {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  padding: 5rem 30rem; }
-  .movies-view__error {
-    padding-top: 10rem;
-    font-size: 4rem;
-    text-align: center;
-    color: #161e2b; }
-  @media only screen and (max-width: 1500px) {
-    .movies-view {
-      padding: 0 10rem 10rem; } }
-  @media only screen and (max-width: 600px) {
-    .movies-view {
-      padding: 1.5rem 3rem 10rem; } }
 
 .movies-show {
   display: flex;
