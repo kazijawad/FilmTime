@@ -1,16 +1,22 @@
 <% include ../partials/header %>
 
-<div>
-	<div class="profile">
-		<h3 class="profile__user"><%= user.username %></h3>
-		<h4 class="profile__title">Submitted Movies</h4>
-		<% movies.forEach(movie => { %>
-		<div class="profile__content">
-			<a class="profile__link" href="/movies/<%= movie.id %>"><%= movie.title %></a>
-			<p class="profile__description"><%= movie.description %></p>
+<main>
+	<div>
+		<div class="profile">
+			<h3 class="profile__user"><%= user.username %></h3>
+			<% if (movies === undefined || movies.length === 0) { %>
+				<p class="profile__error">This user has not uploaded any movies.</p>
+			<% } else { %>
+				<h4 class="profile__title">Submitted Movies</h4>
+				<% movies.forEach(movie => { %>
+					<div class="profile__content">
+						<a class="profile__link" href="/movies/<%= movie.id %>"><%= movie.title %></a>
+						<p class="profile__description"><%= movie.description %></p>
+					</div>
+				<% }); %>
+			<% } %>
 		</div>
-		<% }); %>
 	</div>
-</div>
+</main>
 
 <% include ../partials/footer %>

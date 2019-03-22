@@ -30,7 +30,13 @@
 
     &__description {
         font-size: 2rem;
-    }
+	}
+	
+	&__error {
+		margin: 3rem 0;
+		font-size: 3rem;
+		text-align: center;
+	}
 
     @include response(laptop) {
         margin: 2rem 8rem;
