@@ -30,26 +30,32 @@
 		</div>
 	</div>
 
-	<div class="movies-comment">
+	<div class="comment">
 		<a class="btn btn--white btn--comment" href="/movies/<%= movie._id %>/comments/new">Add New Comment</a>
 		<% movie.comments.forEach(comment => { %>
-		<div class="comment">
-			<a class="comment__user" href="/users/<%= comment.author.id %>"><%= comment.author.username %></a>
-			<span class="comment__time"><%= moment(comment.createdAt).fromNow() %></span>
-			<div>
-				<p class="comment__text"><%= comment.text %></p>
-				<% if (currentUser && comment.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin) { %>
+			<div class="comment__content">
+				<a class="comment__user" href="/users/<%= comment.author.id %>">
+					<%= comment.author.username %>
+				</a>
+				<span class="comment__time">
+					<%= moment(comment.createdAt).fromNow() %>
+				</span>
 				<div>
-					<a class="btn btn--white comment__btn"
-						href="/movies/<%= movie._id %>/comments/<%= comment._id %>/edit">Edit Comment</a>
-					<form class="u-inline-block"
-						action="/movies/<%= movie._id %>/comments/<%= comment._id %>?_method=DELETE" method="POST">
-						<button class="btn btn--black comment__btn u-inline-block">Delete Comment</button>
-					</form>
+					<p class="comment__text">
+						<%= comment.text %>
+					</p>
+					<% if (currentUser && comment.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin) { %>
+						<div>
+							<a class="comment__btn btn btn--white" href="/movies/<%= movie._id %>/comments/<%= comment._id %>/edit">
+								Edit Comment
+							</a>
+							<form class="comment__form" action="/movies/<%= movie._id %>/comments/<%= comment._id %>?_method=DELETE" method="POST">
+								<button class="comment__btn btn btn--black">Delete Comment</button>
+							</form>
+						</div>
+					<% } %>
 				</div>
-				<% } %>
 			</div>
-		</div>
 		<% }) %>
 	</div>
 </main>

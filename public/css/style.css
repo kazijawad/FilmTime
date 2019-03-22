@@ -18,9 +18,6 @@ body {
 main {
   flex: 1; }
 
-.u-inline-block {
-  display: inline-block; }
-
 .banner {
   padding: 4rem 30rem;
   box-shadow: 0 1rem 5rem 1rem rgba(0, 0, 0, 0.4);
@@ -142,8 +139,19 @@ main {
         border: none; } }
 
 .comment {
-  margin-bottom: 2rem;
-  padding: 0 4rem; }
+  margin: 3rem 30rem;
+  padding-bottom: 2rem;
+  background-image: linear-gradient(to bottom right, #323842, #161e2b); }
+  @media only screen and (max-width: 1500px) {
+    .comment {
+      margin: 2rem 8rem; } }
+  @media only screen and (max-width: 600px) {
+    .comment {
+      margin: 1.5rem 3rem;
+      text-align: center; } }
+  .comment__content {
+    margin-bottom: 2rem;
+    padding: 0 4rem; }
   .comment__user {
     font-size: 2.5rem;
     font-weight: 600;
@@ -163,6 +171,7 @@ main {
       .comment__text {
         font-size: 2rem; } }
   .comment__btn {
+    display: inline-block;
     font-size: 1rem !important; }
     .comment__btn:not(:last-child) {
       margin-right: 2rem; }
@@ -171,6 +180,8 @@ main {
         text-align: center; }
         .comment__btn:not(:last-child) {
           margin-right: 0; } }
+  .comment__form {
+    display: inline-block; }
 
 .form {
   margin: 6rem 0;
@@ -458,15 +469,3 @@ main {
 
 .index {
   background-image: linear-gradient(to bottom right, #323842, #161e2b); }
-
-.movies-comment {
-  margin: 0 30rem;
-  padding-bottom: 2rem;
-  background-image: linear-gradient(to bottom right, #323842, #161e2b); }
-  @media only screen and (max-width: 1500px) {
-    .movies-comment {
-      margin: 2rem 8rem; } }
-  @media only screen and (max-width: 600px) {
-    .movies-comment {
-      margin: 1.5rem 3rem;
-      text-align: center; } }
