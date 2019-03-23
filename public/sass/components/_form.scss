@@ -1,11 +1,22 @@
 .form {
-    margin: 6rem 0;
-    text-align: center;
-    color: $color-black;
+    padding: 6rem 30rem;
+	background-color: $color-grey-dark;
+
+	@include response(laptop) {
+		padding: 6rem 10rem;
+	}
+
+	@include response(tablet) {
+		padding: 6rem 5rem;
+	}
+
+	@include response(phone) {
+		padding: 6rem 3rem;
+	}
 
     &__title {
         font-size: 5rem;
-        font-weight: 300;
+        font-weight: 700;
         margin-bottom: 3rem;
     }
 
@@ -19,12 +30,19 @@
 
     &__label {
         display: block;
-        font-size: 2rem;
+        font-size: 3rem;
         padding-bottom: 1rem;
     }
 
     &__input {
+		width: 30rem;
         padding: 1rem;
-        border: .2rem solid $color-blue-light;
+		border: .2rem solid $color-blue-light;
+		background-color: $color-blue-light;
+		color: $color-white;
+
+		&:focus {
+			outline: none;
+		}
     }
 }
