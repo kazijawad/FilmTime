@@ -25,7 +25,7 @@
 		"watch:sass": "node-sass public/sass/main.scss public/css/style.css -w",
 		"compile:sass": "node-sass public/sass/main.scss public/css/style.css",
 		"compress:sass": "node-sass public/css/style.css public/css/style.css --output-style compressed",
-		"build:sass": "npm-run-all compile:sass compress:css"
+		"build:sass": "npm-run-all compile:sass compress:sass"
 	},
 	"dependencies": {
 		"async": "^2.6.2",
