@@ -468,5 +468,8 @@ main {
   .error__text {
     font-size: 3rem; }
 
-.index {
+.movies {
   background-image: linear-gradient(to bottom right, #323842, #161e2b); }
+
+.user {
+  background-color: #323842; }
