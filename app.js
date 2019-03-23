@@ -5,7 +5,6 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const multer = require('multer');
 const methodOverride = require('method-override');
-const cookieParser = require('cookie-parser');
 const flash = require('connect-flash');
 const passport = require('passport');
 const session = require('express-session');
@@ -24,9 +23,8 @@ app.use(multer({ storage: storage }).single('poster'));
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
 app.use(methodOverride('_method'));
-app.use(cookieParser(process.env.SECRET));
 app.use(session({
-	secret: process.env.SECRET,
+	secret: process.env.SESSION_SECRET,
 	resave: false,
 	saveUninitialized: false,
 }));
