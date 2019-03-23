@@ -61,11 +61,7 @@
     }
 
     &--comment {
-		margin: 5rem 3rem !important;
-		
-		@include response(phone) {
-			margin: 3rem 0 !important;
-		}
+		margin-bottom: 3rem;
     }
 
     &--mini {
