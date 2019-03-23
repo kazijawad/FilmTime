@@ -132,7 +132,7 @@ main {
     color: #fff; }
     @media only screen and (max-width: 600px) {
       .card__link {
-        margin: 0 0 .5rem 1rem;
+        margin: 0 0 1rem 1rem;
         border: none; } }
 
 .comment {
