@@ -1,23 +1,23 @@
 .comment {
 	height: 100%;
 	padding: 2rem 30rem 10rem;
-    background-color: $color-grey-dark;
+	background-color: $color-grey-dark;
 
-    @include response(laptop) {
-        padding: 2rem 10rem 10rem;
+	@include response(laptop) {
+		padding: 2rem 10rem 10rem;
 	}
-	
+
 	@include response(tablet) {
 		padding: 2rem 5rem 5rem;
 	}
 
-    @include response(phone) {
+	@include response(phone) {
 		padding: 1.5rem 3rem 3rem;
 		text-align: center;
 	}
 
 	&__user {
-        font-size: 3rem;
+		font-size: 3rem;
 		font-weight: 700;
 		text-decoration: none;
 		color: $color-grey-light;
@@ -25,15 +25,15 @@
 		@include response(phone) {
 			font-size: 2rem;
 		}
-    }
+	}
 
-    &__time {
+	&__time {
 		font-size: 1.5rem;
-        font-style: italic;
-        color: $color-grey-light;
-    }
+		font-style: italic;
+		color: $color-grey-light;
+	}
 
-    &__text {
+	&__text {
 		margin-top: .5rem;
 		font-size: 2rem;
 		
@@ -42,12 +42,12 @@
 		}
 	}
 
-    &__btn {
+	&__btn {
 		display: inline-block;
-        font-size: 1rem !important;
+		font-size: 1rem !important;
 
-        &:not(:last-child) {
-            margin-right: 2rem;
+		&:not(:last-child) {
+			margin-right: 2rem;
 		}
 		
 		@include response(phone) {

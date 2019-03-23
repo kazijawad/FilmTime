@@ -3,11 +3,11 @@
 	box-shadow: 0 1rem 5rem 1rem rgba($color-black, 0.4);
 	text-align: center;
 
-    @include response(laptop) {
-        padding: 4rem 10rem;
-    }
+	@include response(laptop) {
+		padding: 4rem 10rem;
+	}
 
-    @include response(phone) {
+	@include response(phone) {
 		padding: 2rem 3rem;
 	}
 

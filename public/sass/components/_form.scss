@@ -1,5 +1,5 @@
 .form {
-    padding: 6rem 30rem;
+	padding: 6rem 30rem;
 	background-color: $color-grey-dark;
 
 	@include response(laptop) {
@@ -14,29 +14,29 @@
 		padding: 6rem 3rem;
 	}
 
-    &__title {
-        font-size: 5rem;
-        font-weight: 700;
-        margin-bottom: 3rem;
-    }
+	&__title {
+		font-size: 5rem;
+		font-weight: 700;
+		margin-bottom: 3rem;
+	}
 
-    &__item {
-        font-size: 2rem;
+	&__item {
+		font-size: 2rem;
 
-        &:not(:last-child) {
-            margin-bottom: 3rem;
-        }
-    }
+		&:not(:last-child) {
+			margin-bottom: 3rem;
+		}
+	}
 
-    &__label {
-        display: block;
-        font-size: 3rem;
-        padding-bottom: 1rem;
-    }
+	&__label {
+		display: block;
+		font-size: 3rem;
+		padding-bottom: 1rem;
+	}
 
-    &__input {
+	&__input {
 		width: 30rem;
-        padding: 1rem;
+		padding: 1rem;
 		border: .2rem solid $color-blue-light;
 		background-color: $color-blue-light;
 		color: $color-white;
@@ -44,5 +44,5 @@
 		&:focus {
 			outline: none;
 		}
-    }
+	}
 }

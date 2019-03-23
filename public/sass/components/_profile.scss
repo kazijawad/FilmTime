@@ -1,48 +1,48 @@
 .profile {
-    margin: 6rem 30rem;
-    padding: 3rem;
-    background-color: $color-blue-dark;
+	margin: 6rem 30rem;
+	padding: 3rem;
+	background-color: $color-blue-dark;
 
-    &__user {
+	&__user {
 		font-size: 4rem;
 		text-align: center;
 	}
-	
+
 	&__title {
 		padding: 1rem 0;
 		font-size: 3rem;
 	}
 
-    &__content {
-        padding-top: 1.5rem;
-        border-top: .2rem solid $color-blue-light;
-        font-size: 3rem;
+	&__content {
+		padding-top: 1.5rem;
+		border-top: .2rem solid $color-blue-light;
+		font-size: 3rem;
 
-        &:not(:last-child) {
-            margin-bottom: 3rem;
-        }
-    }
-
-    &__link {
-        text-decoration: none;
-        color: $color-grey-light;
-    }
-
-    &__description {
-        font-size: 2rem;
+		&:not(:last-child) {
+			margin-bottom: 3rem;
+		}
 	}
-	
+
+	&__link {
+		text-decoration: none;
+		color: $color-grey-light;
+	}
+
+	&__description {
+		font-size: 2rem;
+	}
+
 	&__error {
 		margin: 3rem 0;
 		font-size: 3rem;
 		text-align: center;
 	}
 
-    @include response(laptop) {
-        margin: 2rem 8rem;
-    }
+	@include response(laptop) {
+		margin: 2rem 8rem;
+	}
 
-    @include response(phone) {
-        margin: 1.5rem 3rem;
-    }
+	@include response(phone) {
+		margin: 1.5rem 3rem;
+	}
 }

@@ -1,11 +1,11 @@
 .card {
 	display: flex;
 	flex-direction: row;
-    margin: 1rem 0;
-    width: 50rem;
-    background-color: $color-blue-dark;
+	margin: 1rem 0;
+	width: 50rem;
+	background-color: $color-blue-dark;
 	box-shadow: 0 2rem 5rem 0 rgba($color-black, 0.4);
-	
+
 	@include response(phone) {
 		flex-direction: column;
 		width: 20rem;
@@ -16,7 +16,7 @@
 		height: 100%;
 	}
 
-    &__title {
+	&__title {
 		vertical-align: top;
 		margin: 1rem 0 1rem 2rem;
 		font-size: 2rem;
@@ -24,23 +24,23 @@
 		@include response(phone) {
 			margin: 1rem 0 .2rem 1rem;
 		}
-    }
+	}
 
-    &__description {
+	&__description {
 		display: -webkit-box;
 		margin: 0 4rem 0 2rem;
-        font-size: 1.3rem;
-        -webkit-line-clamp: 10;
-        -webkit-box-orient: vertical;
-        text-overflow: ellipsis;
-        overflow: hidden;
+		font-size: 1.3rem;
+		-webkit-line-clamp: 10;
+		-webkit-box-orient: vertical;
+		text-overflow: ellipsis;
+		overflow: hidden;
 		color: $color-grey-light;
 		
 		@include response(phone) {
 			display: none;
 		}
 	}
-	
+
 	&__link {
 		display: block;
 		margin: 5rem 2rem 0 2rem;

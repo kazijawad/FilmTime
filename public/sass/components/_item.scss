@@ -1,18 +1,18 @@
 .item {
 	display: flex;
-    padding: 3rem 30rem;
-    background-color: $color-blue-dark;
+	padding: 3rem 30rem;
+	background-color: $color-blue-dark;
 
-    @include response(laptop) {
-        padding: 3rem 10rem;
+	@include response(laptop) {
+		padding: 3rem 10rem;
 	}
 
 	@include response(tablet) {
 		padding: 3rem 5rem;
 	}
 
-    @include response(phone) {
-        padding: 1.5rem 3rem;
+	@include response(phone) {
+		padding: 1.5rem 3rem;
 	}
 
 	&__poster {
@@ -36,7 +36,7 @@
 	}
 
 	&__title {
-        font-size: 3rem;
+		font-size: 3rem;
 		padding: 1rem;
 
 		& * {
@@ -48,7 +48,7 @@
 			padding: 0;
 		}
 	}
-	
+
 	&__year {
 		margin-left: 1rem;
 		color: $color-grey-light;
@@ -58,9 +58,9 @@
 		}
 	}
 
-    &__body {
-        font-size: 3rem;
-        padding: 0 4rem 0 1rem; 
+	&__body {
+		font-size: 3rem;
+		padding: 0 4rem 0 1rem; 
 		
 		@include response(phone) {
 			margin: 2rem 0 0 0;
@@ -72,14 +72,14 @@
 		font-size: 3rem;
 		color: $color-grey-light;
 	}
-	
+
 	&__description {
 		padding-top: 1rem;
 		font-size: 1.5rem;
 		font-weight: 300;
 	}
 
-    &__author {
+	&__author {
 		padding-top: 2rem;
 		font-size: 1.5rem;
 	}
@@ -90,10 +90,10 @@
 	}
 
 	&__link {
-        display: inline-block;
+		display: inline-block;
 
-        &:not(:last-child) {
-            padding-right: 1rem;
-        }
-    }
+		&:not(:last-child) {
+			padding-right: 1rem;
+		}
+	}
 }

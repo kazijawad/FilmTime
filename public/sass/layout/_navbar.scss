@@ -4,7 +4,7 @@
 	justify-content: space-between;
 	align-items: center;
 	padding: 2rem 30rem;
-    background: $color-blue-dark;
+	background: $color-blue-dark;
 	color: $color-grey-light;
 
 	@include response(laptop) {
@@ -23,7 +23,7 @@
 		display: flex;
 	}
 
-    &__brand {
+	&__brand {
 		font-size: 4rem;
 		text-decoration: none;
 		color: $color-grey-light;
@@ -41,7 +41,7 @@
 			font-size: 2rem;
 		}
 	}
-	
+
 	&__search {
 		align-self: center;
 		margin: 0 0 0 2rem;

@@ -1,70 +1,70 @@
 .btn {
-    &, &:link, &:visited {
-        display: inline-block;
-        position: relative;
-        margin-top: 2rem;
-        padding: 1rem 2rem;
-        border: none;
-        border-radius: 10rem;
+	&, &:link, &:visited {
+		display: inline-block;
+		position: relative;
+		margin-top: 2rem;
+		padding: 1rem 2rem;
+		border: none;
+		border-radius: 10rem;
 		font-size: 1.5rem;
 		text-decoration: none;
 		text-transform: uppercase;
 		transition: all .2s;
 		cursor: pointer;
-    }
+	}
 
-    &:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 .5rem 1rem rgba($color-white, .2);
+	&:hover {
+		transform: translateY(-3px);
+		box-shadow: 0 .5rem 1rem rgba($color-white, .2);
 
-        &::after {
-            transform: scaleX(1.4) scaleY(1.6);
-            opacity: 0;
-        }
-    }
+		&::after {
+			transform: scaleX(1.4) scaleY(1.6);
+			opacity: 0;
+		}
+	}
 
-    &:active, &:focus {
-        outline: none;
-        transform: translateY(-1px);
-        box-shadow: 0 .5rem 1rem rgba($color-white, .2);
-    }
+	&:active, &:focus {
+		outline: none;
+		transform: translateY(-1px);
+		box-shadow: 0 .5rem 1rem rgba($color-white, .2);
+	}
 
-    &::after {
-        content: "";
-        display: inline-block;
-        height: 100%;
-        width: 100%;
-        border-radius: 10rem;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -1;
-        transition: all .4s;
-    }
+	&::after {
+		content: "";
+		display: inline-block;
+		height: 100%;
+		width: 100%;
+		border-radius: 10rem;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -1;
+		transition: all .4s;
+	}
 
-    &--white {
-        background-color: $color-white;
-        color: $color-black;
+	&--white {
+		background-color: $color-white;
+		color: $color-black;
 
-        &::after {
-            background-color: $color-white;
-        }
-    }
+		&::after {
+			background-color: $color-white;
+		}
+	}
 
-    &--black {
-        background-color: $color-black;
-        color: $color-white;
+	&--black {
+		background-color: $color-black;
+		color: $color-white;
 
-        &::after {
-            background-color: $color-black;
-        }
-    }
+		&::after {
+			background-color: $color-black;
+		}
+	}
 
-    &--comment {
+	&--comment {
 		margin-bottom: 3rem;
-    }
+	}
 
-    &--mini {
-        padding: .5rem 1rem;
-    }
+	&--mini {
+		padding: .5rem 1rem;
+	}
 }

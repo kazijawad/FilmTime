@@ -1,23 +1,23 @@
 *, *::after, *::before {
-    box-sizing: inherit;
-    margin: 0;
-    padding: 0;
+	box-sizing: inherit;
+	margin: 0;
+	padding: 0;
 }
 
 html {
-    font-size: 62.5%;
+	font-size: 62.5%;
 }
 
 body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
 	box-sizing: border-box;
 	font-family: 'Sunflower', sans-serif;
-    font-weight: 400;
-    color: $color-white;
+	font-weight: 400;
+	color: $color-white;
 }
 
 main {
-    flex: 1;
+	flex: 1;
 }
