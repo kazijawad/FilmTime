@@ -11,10 +11,13 @@
 				</div>
 				<div class="form__item">
 					<label class="form__label" for="description">Description</label>
-					<textarea class="form__input" rows="8" cols="30" type="text" name="description" id="description"
-						required>
+					<textarea class="form__input" rows="8" cols="30" type="text" name="description" id="description" required>
 						<%= movie.description %>
 					</textarea>
+				</div>
+				<div class="form__item">
+					<label class="form__label" for="releaseYear">Release Year</label>
+					<input class="form__input" type="number" min="1900" max="2100" name="releaseYear" id="releaseYear" value="<%= movie.releaseYear %>" required />
 				</div>
 				<div class="form__item">
 					<label class="form__label" for="poster">Poster</label>

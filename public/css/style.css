@@ -136,6 +136,7 @@ main {
         border: none; } }
 
 .comment {
+  height: 100%;
   padding: 2rem 30rem 10rem;
   background-color: #323842; }
   @media only screen and (max-width: 1500px) {
@@ -239,15 +240,23 @@ main {
     color: #fff; }
     @media only screen and (max-width: 600px) {
       .item__content {
-        padding: 3rem 2rem;
+        padding: 3rem 0;
         text-align: center; } }
   .item__title {
     font-size: 3rem;
     padding: 1rem; }
+    .item__title * {
+      display: inline-block; }
     @media only screen and (max-width: 600px) {
       .item__title {
         font-size: 2.5rem;
         padding: 0; } }
+  .item__year {
+    margin-left: 1rem;
+    color: #a2aec1; }
+    @media only screen and (max-width: 600px) {
+      .item__year {
+        margin: 0; } }
   .item__body {
     font-size: 3rem;
     padding: 0 4rem 0 1rem; }

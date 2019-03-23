@@ -30,7 +30,7 @@
 		color: $color-white;
 		
 		@include response(phone) {
-			padding: 3rem 2rem;
+			padding: 3rem 0;
 			text-align: center;
 		}
 	}
@@ -39,11 +39,24 @@
         font-size: 3rem;
 		padding: 1rem;
 
+		& * {
+			display: inline-block;
+		}
+
 		@include response(phone) {
 			font-size: 2.5rem;
 			padding: 0;
 		}
-    }
+	}
+	
+	&__year {
+		margin-left: 1rem;
+		color: $color-grey-light;
+
+		@include response(phone) {
+			margin: 0;
+		}
+	}
 
     &__body {
         font-size: 3rem;

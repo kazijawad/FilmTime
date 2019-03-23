@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const movieSchema = new mongoose.Schema({
 	title: String,
 	description: String,
+	releaseYear: Number,
 	poster: {
 		data: Buffer,
 		mimeType: String,
