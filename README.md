@@ -62,10 +62,6 @@ Database is Online
 https://localhost:3000
 ```
 
-## Deployment
-
-Deployed with [Heroku](https://www.heroku.com)
-
 ## Built With
 
 * [Express](http://www.expressjs.com) - Web Framework
