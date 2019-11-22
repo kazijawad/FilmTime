@@ -1,8 +1,6 @@
-# [FilmTime](https://www.filmtime.dev)
+# FilmTime
 
-A web app that displays movie information.
-
-![Screenshot](https://github.com/kazijawad/FilmTime/blob/master/screenshot.png)
+FilmTime is a community-driven movie database concept. Users can contribute by adding a movie to the platform that can be continously updated with more information overtime. It is also a social platform through comment sections and individual profiles.
 
 ## Getting Started
 
